@@ -23,4 +23,17 @@
   background-image: url("../images/logo.png");
   background-size: cover;
   background-position: center;
+}
+
+.header {
+  color: #212121;
+  font-size: 36px;
+}
+
+.red-box {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: red;
+  border: 1px solid black;
 }/*# sourceMappingURL=index.css.map */
