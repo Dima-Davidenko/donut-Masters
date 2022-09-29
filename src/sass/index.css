@@ -1,6 +1,6 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #3c322d;
   background-color: rgba(243, 132, 140, 0.12);
@@ -49,4 +49,103 @@ img {
     max-width: 1280px;
     padding: 0 16px;
   }
+}
+
+.section__title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  color: #3c322d;
+}
+@media screen and (min-width: 768px) {
+  .section__title {
+    font-size: 32px;
+  }
+}
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.speakers__item {
+  text-align: center;
+  max-width: 130px;
+}
+.speakers__image {
+  width: 100%;
+}
+.speakers__name {
+  color: #3c322d;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.speakers__about {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .speakers__tittle--position {
+    margin-bottom: 12px;
+  }
+  .speakers__item {
+    margin-right: 20px;
+    margin-bottom: 21px;
+  }
+  .speakers__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .speakers__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+  .speakers__item {
+    max-width: 130px;
+  }
+  .speakers__name {
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .speakers {
+    flex-wrap: nowrap;
+  }
+  .speakers__item:not(:last-child) {
+    margin-right: 32px;
+  }
+  .speakers__name {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .speakers__item {
+    max-width: 152px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .speakers__tittle--position {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .speakers__tittle--position {
+    margin-bottom: 5px;
+  }
+  .speakers__about {
+    font-size: 16px;
+  }
+  .speakers__name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .speakers__item {
+    max-width: 288px;
+  }
+}
+
+.reviews__tittle--position {
+  margin-bottom: 27px;
 }/*# sourceMappingURL=index.css.map */
