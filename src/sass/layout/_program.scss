@@ -1,5 +1,6 @@
 .program {
   padding-top: 28px;
+  padding-bottom: 36px;
 
   &__title {
     font-weight: 500;
@@ -8,7 +9,6 @@
     text-align: center;
     color: $brown-clr;
     margin-bottom: 8px;
-    text-align: center;
   }
 
   &__text {
@@ -43,4 +43,43 @@
   &__read__more__text {
     display: none;
   }
+
+  &__thumb{
+    outline: 1px solid blue;
+    // width: 130px;
+    // height: 130px;
+    border-radius: 50%;
+  }
+
+&__pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    outline: 1px solid tomato;
 }
+
+
+// &_pic_item{
+//     position: relative;
+// }
+
+// &__pic{
+//     object-fit: cover;
+//     border-radius: 50%;
+//     background: linear-gradient(359.99deg, #000000 -9.2%, rgba(156, 156, 156, 0) 97.68%);
+//     border: 1px solid #F3848C;
+
+// }
+
+// &__pic__text{
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+
+// }
+
+
+}
+
+
+
