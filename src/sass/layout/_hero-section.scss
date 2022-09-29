@@ -1,3 +1,63 @@
-.hero__title {
-    font-size: 20px;
-}
+.hero-section {
+   
+    
+        margin: 0 auto;
+        min-height: 400px;
+    
+        background-color: $black-background-color;
+        background-image: url()
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:
+                url("../images/Hero-mob-2x-min.jpg");
+        }
+    
+        @media screen and(min-width:768px) {
+            background-image: 
+                url('');
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image:
+                    url('');
+            }
+        }
+    
+        @media screen and(min-width:1200px) {
+            max-width: 1600px;
+            min-height: 600px;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-image: url('');
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: 
+                    url('');
+            }
+        }
+        .hero-title{
+            margin: 98px 418px 143px 31px;
+            position: absolute;
+            max-width: 319px;
+            height: 74px;
+        }
+    .Button-regist{
+        weight: 145px;
+        height: 40px;
+        color: white;
+        background-color: #F3848C;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.22;
+        text-align: center;
+        border-radius: 25px;
+        padding: 8px 30px 9px 31px;
+    }
