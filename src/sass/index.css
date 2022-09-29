@@ -49,4 +49,45 @@ img {
     max-width: 1280px;
     padding: 0 16px;
   }
+}
+
+.program {
+  padding-top: 28px;
+}
+.program__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #3c322d;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.program__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #3c322d;
+  margin-bottom: 8px;
+}
+.program__list {
+  margin-bottom: 16px;
+}
+.program__item::before {
+  content: "#";
+  margin-right: 8px;
+}
+.program__read__more {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #3c322d;
+}
+.program__read__more__text {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
