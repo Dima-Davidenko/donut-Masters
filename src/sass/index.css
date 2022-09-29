@@ -49,4 +49,82 @@ img {
     max-width: 1280px;
     padding: 0 16px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .container__about-us {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__history {
+    width: 337px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-us__history {
+    width: 608px;
+  }
+}
+
+.about-us__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #3c322d;
+  margin-bottom: 8px;
+  margin-top: 28px;
+}
+@media screen and (min-width: 768px) {
+  .about-us__title {
+    margin-bottom: 28px;
+    font-size: 32px;
+    line-height: 1.21;
+    margin-top: 0;
+  }
+}
+.about-us__text {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #3c322d;
+}
+@media screen and (min-width: 1280px) {
+  .about-us__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+
+.about-us__text:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.about-us__text:last-child {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .about-us__text:last-child {
+    display: contents;
+  }
+}
+
+.about-us__img {
+  width: 280px;
+  height: 285px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about-us__img {
+    width: 336px;
+    height: 359px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-us__img {
+    width: 608px;
+    height: 381px;
+  }
 }/*# sourceMappingURL=index.css.map */
