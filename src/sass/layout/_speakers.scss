@@ -1,13 +1,13 @@
 .speakers {
   display: flex;
   flex-wrap: wrap;
-    &__item{
-        text-align: center;
-        max-width: 130px;
-    }
-    &__image{
-        width: 100%;
-    }
+  &__item {
+    text-align: center;
+    max-width: 130px;
+  }
+  &__image {
+    width: 100%;
+  }
   &__name {
     color: $brown-clr;
     font-weight: 600;
@@ -20,7 +20,7 @@
     line-height: 15px;
     margin: 0 auto;
   }
-  @media screen and(max-width:767px) {
+  @media screen and (max-width: 767px) {
     &__tittle--position {
       margin-bottom: 12px;
     }
@@ -37,33 +37,33 @@
     // &__image{
     //     margin-bottom: 12px;
     // }
-    &__item{
-        max-width: 130px;
+    &__item {
+      max-width: 130px;
     }
-    &__name{
-        margin-bottom: 12px; 
-        margin-top: 12px;
+    &__name {
+      margin-bottom: 12px;
+      margin-top: 12px;
     }
   }
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     &__item:not(:last-child) {
       margin-right: 32px;
     }
-    &__name{
-        margin-bottom: 20px; 
-        margin-top: 20px;
+    &__name {
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
-    &__item{
-        max-width: 152px;
+    &__item {
+      max-width: 152px;
     }
   }
-  @media screen and(max-width:1199px) {
+  @media screen and (max-width: 1199px) {
     &__tittle--position {
       margin-bottom: 20px;
     }
   }
-  @media screen and(min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     &__tittle--position {
       margin-bottom: 5px;
     }
@@ -71,11 +71,11 @@
       font-size: 16px;
     }
     &__name {
-        font-size: 18px;
-        line-height: 22px;
-      }
-      &__item{
-        max-width: 288px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__item {
+      max-width: 288px;
     }
   }
 }
