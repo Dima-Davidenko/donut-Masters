@@ -1,0 +1,128 @@
+.modal__input,
+.modal__textarea {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    font-style: inherit;
+}
+
+.modal__input:hover,
+.modal__input:focus,
+.modal__textarea:focus,
+.modal__textarea:hover {
+    border-color: $pink-clr;
+    cursor: pointer;
+}
+
+
+.contact {
+    margin-top: 40px;
+}
+
+.contact__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    color: #2E2520;
+}
+
+.contact__text {
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    color: $brown-clr;
+    margin-top: 27px;
+    margin-bottom: 17px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 27px;
+    }
+
+    @media screen and (min-width: 1280px) {}
+
+    margin-bottom: 16px;
+}
+
+.contact__but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $pink-clr;
+    width: 145px;
+    height: 40px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $white-clr;
+    border: none;
+    cursor: pointer;
+}
+
+.contact__but:hover,
+.contact__but:focus {
+    background-color: $white-clr;
+    color: $pink-clr;
+    border: 1px solid $pink-clr;
+    outline: none;
+}
+
+
+
+.modal__textarea {
+    margin-top: 20px;
+    margin-bottom: 28px;
+}
+
+.contact__svg {
+    fill: currentColor;
+
+}
+
+.contact__socium:focus,
+.contact__socium:hover {
+    color: $pink-clr;
+    outline: none;
+}
+
+.contact__internet {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 31px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-top: 35px;
+    }
+}
+
+
+.container__contact {
+
+    @media screen and (min-width: 768px) {
+        width: 336px;
+        height: 288px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 394px;
+        height: 289px;
+    }
+
+}

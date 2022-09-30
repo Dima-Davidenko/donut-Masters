@@ -2,7 +2,17 @@
 @import './utils/variables';
 @import './base/base';
 @import './base/container';
+@import './components/button';
+@import './components/section';
+@import './components/mob-menu';
+@import './components/soc-list';
+@import './components/logo';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/about-us';
+@import './layout/speakers';
+@import './layout/reviews';
 @import './layout/program';
 @import './layout/registration';
-
-
+@import './layout/contact';
+@import './layout/footer';

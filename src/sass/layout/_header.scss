@@ -1,0 +1,31 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.header__container {
+  position: relative;
+  padding-top: 36px;
+}
+.header__nav {
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+.header__nav-list {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+    margin-left: 55px;
+    font-size: 18px;
+  }
+}
+.header__nav-item {
+  @media screen and (min-width: 1280px) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

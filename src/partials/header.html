@@ -1,32 +1,41 @@
-<div class="container header__container">
-  <nav>
-    <a href="#">
-      <img class="logo" src="#" alt="Donut Logo" />
-    </a>
-    <ul class="header__nav-list mob-menu">
-      <li class="header__nav-item">
-        <a href="#">About us</a>
-      </li>
+<header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <a href="#">
+        <svg class="logo">
+          <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <ul class="header__nav-list mob-menu">
+        <li class="header__nav-item">
+          <a href="#">About us</a>
+        </li>
 
-      <li class="header__nav-item">
-        <a href="#">Program</a>
-      </li>
+        <li class="header__nav-item">
+          <a href="#">Program</a>
+        </li>
 
-      <li class="header__nav-item">
-        <a href="#">Speakers</a>
-      </li>
+        <li class="header__nav-item">
+          <a href="#">Speakers</a>
+        </li>
 
-      <li class="header__nav-item">
-        <a href="#">Price</a>
-      </li>
+        <li class="header__nav-item">
+          <a href="#">Price</a>
+        </li>
 
-      <li class="header__nav-item">
-        <a href="#">Reviews</a>
-      </li>
+        <li class="header__nav-item">
+          <a href="#">Reviews</a>
+        </li>
 
-      <li class="header__nav-item">
-        <a href="#">Contacts</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+        <li class="header__nav-item">
+          <a href="#">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="mob-menu__button" type="button">
+      <svg class="mob-menu__icon mob-menu__icon--open">
+        <use href="./images/icons.svg#icon-menu-burger"></use>
+      </svg>
+    </button>
+  </div>
+</header>
