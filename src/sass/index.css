@@ -63,7 +63,7 @@ img {
   color: #3c322d;
   margin-bottom: 8px;
 }
-.program__text {
+.program__text__ {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -76,20 +76,6 @@ img {
 .program__item::before {
   content: "#";
   margin-right: 8px;
-}
-.program__read__more {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: #3c322d;
-}
-.program__read__more__text {
-  display: none;
 }
 .program__thumb {
   position: relative;
@@ -126,6 +112,18 @@ img {
   /* identical to box height */
   text-align: center;
   color: #ffffff;
+}
+
+.read-more-text {
+  display: none;
+}
+
+.read-more-text--show {
+  display: inline;
+}
+
+.read-more-btn {
+  color: blue;
 }
 
 .registration__title {
