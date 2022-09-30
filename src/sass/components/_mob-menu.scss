@@ -1,0 +1,19 @@
+.mob-menu__button {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    top: 40px;
+    right: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.mob-menu__icon--open {
+  width: 30px;
+  height: 16px;
+}
