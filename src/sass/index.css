@@ -92,13 +92,125 @@ img {
   display: none;
 }
 .program__thumb {
+  position: relative;
   outline: 1px solid blue;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
 }
 .program__pic {
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   outline: 1px solid tomato;
+}
+.program__pic__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.program__pic__title {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
+.program__pic__subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  text-align: center;
+  color: #ffffff;
+}
+
+.registration__title {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #2e2520;
+  margin-bottom: 27px;
+}
+
+.registration__form {
+  background: #3D2C2C;
+  opacity: 0.6;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, rgba(61, 44, 44, 0.6), rgba(61, 44, 44, 0.6)), url(../images/registration_img/registration_bg.png);
+  background-size: cover;
+  width: 280px;
+  height: 394px;
+  padding-top: 40px;
+  padding-left: 7px;
+  padding-right: 8px;
+}
+
+.registration__form__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  width: 114px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+.registration__form__title::after {
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid white;
+}
+
+.registration__form__subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin: 20px;
+}
+
+.registration__form__input {
+  width: 265px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 20px;
+}
+.registration__form__input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.registration__form__input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.registration__form__input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
 }/*# sourceMappingURL=index.css.map */
