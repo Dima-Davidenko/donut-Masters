@@ -1,8 +1,10 @@
 <header class="header">
   <div class="container header__container">
-    <nav>
+    <nav class="header__nav">
       <a href="#">
-        <img class="logo" src="#" alt="Donut Logo" />
+        <svg class="logo">
+          <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
       </a>
       <ul class="header__nav-list mob-menu">
         <li class="header__nav-item">
@@ -30,5 +32,10 @@
         </li>
       </ul>
     </nav>
+    <button class="mob-menu__button" type="button">
+      <svg class="mob-menu__icon mob-menu__icon--open">
+        <use href="./images/icons.svg#icon-menu-burger"></use>
+      </svg>
+    </button>
   </div>
 </header>
