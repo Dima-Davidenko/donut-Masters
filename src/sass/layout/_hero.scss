@@ -67,12 +67,55 @@
       (min-resolution: 2dppx) {
       background-image: url('../images/images-hero/hero-image-2x-min.jpg');
     }
-
-    
-
-    
     }
   }
 
-
+  .hero-title-text {
+    margin-bottom: 18px;
+  
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight:600;
+    font-size: 28px;
+    line-height: 1.21;
+    letter-spacing: -0.03em;
+  
+    @media screen and (min-width: 768px) {
+      width: 319px;
+  
+      margin-bottom: 10px;
+  
+      font-size: 30px;
+      line-height: 1.23;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      width: 757px;
+  
+      margin-bottom: 20px;
+  
+      font-size: 60px;
+      line-height: 1.08;
+    }
+  }
+  
+  .hero-title__post {
+    margin-bottom: 28px;
+  
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: normal;
+    font-weight:500;
+    font-size: inherit;
+    line-height: 1.25;
+  
+    @media screen and (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 28px;
+  
+      font-size: 24px;
+      line-height: 1.21;
+    }
+  }
 
