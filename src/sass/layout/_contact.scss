@@ -1,87 +1,84 @@
-
 .contact__container {
-    padding-top: 20px;
-    padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 
-    @media screen and (min-width: 768px) {
-        padding-top: 34px;
-        padding-bottom: 80px;
-    }
+  @media screen and (min-width: 768px) {
+    padding-top: 34px;
+    padding-bottom: 80px;
+  }
 
-    @media screen and (min-width: 1280px) {
-        padding-top: 63px;
-        padding-bottom: 100px;
-    }
+  @media screen and (min-width: 1280px) {
+    padding-top: 63px;
+    padding-bottom: 100px;
+  }
 }
 
 .contact__input,
 .contact__textarea {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: transparent;
-    outline: none;
-    width: 100%;
-    font-style: inherit;
-    transition: border-color 250ms $animation;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  font-style: inherit;
+  transition: border-color 250ms $animation;
 
-    &:hover,
-    &:focus,
-    &:focus,
-    &:hover {
-        border-color: $pink-clr;
-        cursor: pointer;
-    }
+  &:hover,
+  &:focus,
+  &:focus,
+  &:hover {
+    border-color: $pink-clr;
+    cursor: pointer;
+  }
 }
 
 .contact__title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.2;
-    text-align: center;
-    color: #2e2520;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  color: #2e2520;
 }
 
 .contact__text {
-    font-weight: 400;
-    line-height: 1.25;
-    text-align: center;
-    color: $brown-clr;
-    margin-top: 27px;
-    margin-bottom: 17px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  color: $brown-clr;
+  margin-top: 27px;
+  margin-bottom: 17px;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 27px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 27px;
+  }
 
-    @media screen and (min-width: 1280px) {
-        margin-bottom: 16px;
-    }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
 }
 
 .contact__textarea {
-    margin-top: 20px;
-    margin-bottom: 28px;
+  margin-top: 20px;
+  margin-bottom: 28px;
 }
 
 .contact__form {
-    max-width: 336px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 336px;
+  width: 100%;
+  margin: 0 auto;
 
-    @media screen and (min-width: 768px) {
-        width: 336px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
 
-    @media screen and (min-width: 1280px) {
-        width: 394px;
-    }
+  @media screen and (min-width: 1280px) {
+    width: 394px;
+  }
 }
-
-
 
 // .modal__input,
 // .modal__textarea {
@@ -105,18 +102,18 @@
 //     cursor: pointer;.contact__container {
 //             padding-top: 20px;
 //             padding-bottom: 40px;
-    
+
 //             @media screen and (min-width: 768px) {
 //                 padding-top: 34px;
 //                 padding-bottom: 80px;
 //             }
-    
+
 //             @media screen and (min-width: 1280px) {
 //                 padding-top: 63px;
 //                 padding-bottom: 100px;
 //             }
 //         }
-    
+
 //         .contact__input,
 //         .contact__textarea {
 //             border-bottom-width: 1px;
@@ -130,7 +127,7 @@
 //             width: 100%;
 //             font-style: inherit;
 //             transition: border-color 250ms $animation;
-    
+
 //             &:hover,
 //             &:focus,
 //             &:focus,
@@ -139,7 +136,7 @@
 //                 cursor: pointer;
 //             }
 //         }
-    
+
 //         .contact__title {
 //             font-weight: 600;
 //             font-size: 24px;
@@ -147,7 +144,7 @@
 //             text-align: center;
 //             color: #2e2520;
 //         }
-    
+
 //         .contact__text {
 //             font-weight: 400;
 //             line-height: 1.25;
@@ -155,38 +152,37 @@
 //             color: $brown-clr;
 //             margin-top: 27px;
 //             margin-bottom: 17px;
-    
+
 //             @media screen and (min-width: 768px) {
 //                 margin-bottom: 27px;
 //             }
-    
+
 //             @media screen and (min-width: 1280px) {
 //                 margin-bottom: 16px;
 //             }
-    
+
 //         }
-    
+
 //         .contact__textarea {
 //             margin-top: 20px;
 //             margin-bottom: 28px;
 //         }
-    
+
 //         .contact__form {
 //             max-width: 336px;
 //             width: 100%;
 //             margin: 0 auto;
-    
+
 //             @media screen and (min-width: 768px) {
 //                 width: 336px;
 //             }
-    
+
 //             @media screen and (min-width: 1280px) {
 //                 width: 394px;
 //             }
-    
+
 //         }
 // }
-
 
 // .contact {
 //     margin-top: 40px;
@@ -244,8 +240,6 @@
 //     outline: none;
 // }
 
-
-
 // .modal__textarea {
 //     margin-top: 20px;
 //     margin-bottom: 28px;
@@ -279,7 +273,6 @@
 //     }
 // }
 
-
 // .container__contact {
 
 //     @media screen and (min-width: 768px) {
@@ -293,4 +286,3 @@
 //     }
 
 // }
->>>>>>> Stashed changes
