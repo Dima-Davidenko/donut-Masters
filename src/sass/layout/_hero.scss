@@ -1,15 +1,15 @@
 .hero-title{
-    background-image: url(../images/images-hero/hero-image-1x-min.jpg) ;
-    width: 1200px;
+    background-image: url(../../images/images-hero/hero-image-1x-mob-min.jpg) ;
+    min-width: 320px;
     height:auto;
-    padding: 171px 507px 90px 16px;
+    padding: 86px 20px 9px 20px;
 }
 .hero-title-text{
-    max-width: 757px;
+    max-width: 280px;
     height: 130px;
-    font-size: 60px;
-    line-height: 0.89;
-    text-align: left;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
     
 }
 .hero-title__post{

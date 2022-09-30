@@ -1,6 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 body {
+<<<<<<< Updated upstream
   font-family: Montserrat, sans-serif;
+=======
+  font-family: "Montserrat", sans-serif;
+>>>>>>> Stashed changes
   font-size: 16px;
   color: #3c322d;
   background-color: rgba(243, 132, 140, 0.12);
@@ -51,11 +55,153 @@ img {
   }
 }
 
+<<<<<<< Updated upstream
 .hero-title {
   background-image: url(../images/images-hero/hero-image-1x-min.jpg);
   width: 1200px;
   height: auto;
   padding: 171px 507px 90px 16px;
+=======
+.button {
+  display: block;
+  margin: 0 auto;
+  width: 145px;
+  padding: 8px 0px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1, 22;
+  text-align: center;
+  color: #f6f7f7;
+  background-color: #f3848c;
+  border: 1px solid #f3848c;
+  border-radius: 25px;
+  filter: drop-shadow(10px 15px 25px rgba(232, 183, 183, 0.45));
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:hover, .button:focus {
+  color: #f3848c;
+  background-color: #f6f7f7;
+}
+.button:active {
+  color: #f6f7f7;
+  background-color: #f3848c;
+  box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25);
+}
+
+.section__title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  color: #3c322d;
+}
+@media screen and (min-width: 768px) {
+  .section__title {
+    font-size: 32px;
+  }
+}
+
+.mob-menu__button {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu__button {
+    top: 40px;
+    right: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .mob-menu__button {
+    display: none;
+  }
+}
+
+.mob-menu__icon--open {
+  width: 30px;
+  height: 16px;
+}
+
+.logo {
+  width: 158px;
+  height: 70px;
+  color: #3c322d;
+  fill: currentColor;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.header__container {
+  position: relative;
+  padding-top: 36px;
+}
+
+@media screen and (min-width: 1280px) {
+  .header__nav {
+    display: flex;
+  }
+}
+
+.header__nav-list {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .header__nav-list {
+    display: flex;
+    align-items: center;
+    margin-left: 55px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header__nav-item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.hero-title {
+  background-image: url(../../images/images-hero/hero-image-1x-mob-min.jpg);
+  min-width: 320px;
+  height: auto;
+  padding: 86px 20px 9px 20px;
+}
+
+.hero-title-text {
+  max-width: 280px;
+  height: 130px;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-title__post {
+  font-style: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .container__about-us {
+    display: flex;
+    justify-content: space-between;
+  }
+>>>>>>> Stashed changes
 }
 
 .hero-title-text {
@@ -73,6 +219,7 @@ img {
   margin-bottom: 25px;
 }
 
+<<<<<<< Updated upstream
 .Button {
   width: 145px;
   height: 40px;
@@ -81,4 +228,116 @@ img {
   background-color: #F3848C;
   text-align: center;
   padding-top: 10px;
+=======
+.about-us__text:last-child {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .about-us__text:last-child {
+    display: contents;
+  }
+}
+
+.about-us__img {
+  width: 280px;
+  height: 285px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about-us__img {
+    width: 336px;
+    height: 359px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-us__img {
+    width: 608px;
+    height: 381px;
+  }
+}
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.speakers__item {
+  text-align: center;
+  max-width: 130px;
+}
+.speakers__image {
+  width: 100%;
+}
+.speakers__name {
+  color: #3c322d;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.speakers__about {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .speakers__tittle--position {
+    margin-bottom: 12px;
+  }
+  .speakers__item {
+    margin-right: 20px;
+    margin-bottom: 21px;
+  }
+  .speakers__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .speakers__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+  .speakers__item {
+    max-width: 130px;
+  }
+  .speakers__name {
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .speakers {
+    flex-wrap: nowrap;
+  }
+  .speakers__item:not(:last-child) {
+    margin-right: 32px;
+  }
+  .speakers__name {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .speakers__item {
+    max-width: 152px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .speakers__tittle--position {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .speakers__tittle--position {
+    margin-bottom: 5px;
+  }
+  .speakers__about {
+    font-size: 16px;
+  }
+  .speakers__name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .speakers__item {
+    max-width: 288px;
+  }
+}
+
+.reviews__tittle--position {
+  margin-bottom: 27px;
+>>>>>>> Stashed changes
 }/*# sourceMappingURL=index.css.map */
