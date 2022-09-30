@@ -1,8 +1,7 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
-  font-weight: 400;
   color: #3c322d;
   background-color: rgba(243, 132, 140, 0.12);
 }
@@ -52,124 +51,67 @@ img {
   }
 }
 
-.modal__input,
-.modal__textarea {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #000000;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background-color: transparent;
-  outline: none;
-  width: 100%;
-  font-style: inherit;
-}
-
-.modal__input:hover,
-.modal__input:focus,
-.modal__textarea:focus,
-.modal__textarea:hover {
-  border-color: #f3848c;
-  cursor: pointer;
-}
-
-.contact {
+.footerr {
   margin-top: 40px;
 }
-
-.contact__title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.2;
-  text-align: center;
-  color: #2e2520;
-}
-
-.contact__text {
-  font-weight: 400;
-  line-height: 1.25;
-  text-align: center;
-  color: #3c322d;
-  margin-top: 27px;
-  margin-bottom: 17px;
-  margin-bottom: 16px;
-}
 @media screen and (min-width: 768px) {
-  .contact__text {
-    margin-bottom: 27px;
+  .footerr {
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 }
-.contact__but {
+@media screen and (min-width: 1280px) {
+  .footerr {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+.footerr__item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #f3848c;
-  width: 145px;
-  height: 40px;
-  border-radius: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.22;
-  color: #f6f7f7;
-  border: none;
-  cursor: pointer;
+  justify-content: space-between;
 }
 
-.contact__but:hover,
-.contact__but:focus {
-  background-color: #f6f7f7;
-  color: #f3848c;
-  border: 1px solid #f3848c;
-  outline: none;
-}
-
-.modal__textarea {
-  margin-top: 20px;
-  margin-bottom: 28px;
-}
-
-.contact__svg {
+.footerr__svg {
   fill: currentColor;
 }
+@media screen and (min-width: 768px) {
+  .footerr__svg {
+    display: none;
+  }
+}
 
-.contact__socium:focus,
-.contact__socium:hover {
+.footerr__phone:hover,
+.footerr__phone:focus,
+.footerr__map:focus,
+.footerr__map:hover {
   color: #f3848c;
-  outline: none;
 }
 
-.contact__internet {
-  display: flex;
-  width: 80px;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 28px;
+.container__footerr {
+  height: 70px;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
-  .contact__internet {
-    margin-top: 31px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .contact__internet {
-    margin-top: 35px;
+  .container__footerr {
+    height: 20px;
+    position: static;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .container__contact {
-    width: 336px;
-    height: 288px;
-  }
+.footerr__map,
+.footerr__phone {
+  font-style: normal;
+  line-height: 1.25;
 }
-@media screen and (min-width: 1280px) {
-  .container__contact {
-    width: 394px;
-    height: 289px;
+
+.footerr__link {
+  position: absolute;
+  top: 13px;
+  left: 129px;
+}
+@media screen and (min-width: 768px) {
+  .footerr__link {
+    display: none;
   }
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
