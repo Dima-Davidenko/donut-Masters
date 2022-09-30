@@ -12,3 +12,16 @@
 .price__text {
   display: inline-block;
 }
+.price {
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 24px;
+  padding: 20px;
+}
+
+.price__item {
+  position: relative;
+}
+

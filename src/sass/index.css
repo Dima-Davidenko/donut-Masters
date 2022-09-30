@@ -195,8 +195,7 @@ img {
   }
 }
 
-.hero-title {
-  position: relative;
+.hero-section {
   padding-top: 16px;
   padding-bottom: 8px;
   min-height: 320px;
@@ -205,9 +204,8 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-width: 480px;
 }
-.hero-title .hero-title:after {
+.hero-section .hero-section:after {
   display: block;
   content: "";
   position: absolute;
@@ -215,16 +213,14 @@ img {
   height: 50px;
   top: 104px;
   left: 38px;
-  border: 10px solid rgba(243, 132, 140, 0.12);
-  border-radius: 50%;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero-title {
+  .hero-section {
     background-image: url("../images/images-hero/hero-image-2x-mob-min.jpg");
   }
 }
 @media screen and (min-width: 768px) {
-  .hero-title {
+  .hero-section {
     padding-top: 24px;
     padding-bottom: 43px;
     text-align: left;
@@ -233,39 +229,29 @@ img {
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero-title {
+  .hero-section {
     background-image: url("../images/images-hero/hero-image-2x-tabl-min.jpg");
   }
 }
 @media screen and (min-width: 768px) {
-  .hero-title .hero-title:after {
+  .hero-section .hero-section:after {
     width: 100px;
     height: 100px;
     top: 92px;
     left: 268px;
-    border: 20px solid rgba(243, 132, 140, 0.12);
   }
 }
 @media screen and (min-width: 1100px) {
-  .hero-title {
-    padding-top: 36px;
+  .hero-section {
+    padding-top: 6px;
     padding-bottom: 90px;
     background-size: 100%;
     background-image: url("../images/images-hero/hero-image-1x-min.jpg");
   }
 }
 @media screen and (min-width: 1100px) and (min-device-pixel-ratio: 2), screen and (min-width: 1100px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1100px) and (min-resolution: 192dpi), screen and (min-width: 1100px) and (min-resolution: 2dppx) {
-  .hero-title {
+  .hero-section {
     background-image: url("../images/images-hero/hero-image-2x-min.jpg");
-  }
-}
-@media screen and (min-width: 1100px) {
-  .hero-title .hero-title:after {
-    width: 150px;
-    height: 150px;
-    top: 171px;
-    left: 449px;
-    border: 30px solid rgba(243, 132, 140, 0.12);
   }
 }
 
