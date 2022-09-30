@@ -9,10 +9,19 @@
 }
 
 .registration__form {
-    background: #3D2C2C;
-    opacity: 0.6;
-    border-radius: 10px;
-  background-image:linear-gradient(90deg, rgba(61,44,44, 0.6), rgba(61,44,44, 0.6)), url(../images/registration_img/registration_bg.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: #f6f7f7;
+  background: #3d2c2c;
+  opacity: 0.6;
+  border-radius: 10px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/registration_img/registration_bg.png);
   background-size: cover;
   width: 280px;
   height: 394px;
@@ -21,7 +30,7 @@
   padding-right: 8px;
 }
 
-.registration__form__title {
+.registration__form__date {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -32,12 +41,20 @@
   width: 114px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+
+  display: block;
 
   &::after {
+    content: ' ';
+    display: block;
+    height: 1px;
+    background-color: white;
+    width: 264px;
     position: absolute;
-    bottom: 0;
-    border-bottom: 2px solid white;
+    left: 0;
+    margin-left: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -49,7 +66,9 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
-  margin: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 265px;
 }
 .registration__form__input {
   width: 265px;
@@ -65,7 +84,10 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-
     color: #ffffff;
   }
+}
+
+.registration__form__button {
+  
 }
