@@ -1,7 +1,8 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  font-weight: 400;
   color: #3c322d;
   background-color: rgba(243, 132, 140, 0.12);
 }
@@ -52,7 +53,7 @@ img {
 }
 
 .section__title {
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
@@ -99,7 +100,7 @@ img {
   .speakers__item:nth-child(2n) {
     margin-right: 0;
   }
-  .speakers__item:nth-last-child(-n+2) {
+  .speakers__item:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
   .speakers__item {
@@ -148,4 +149,4 @@ img {
 
 .reviews__tittle--position {
   margin-bottom: 27px;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
