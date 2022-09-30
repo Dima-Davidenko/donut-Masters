@@ -1,5 +1,17 @@
 .registration {
   padding-bottom: 36px;
+
+  @media screen and (min-width: 768px) {
+    outline: 1px solid red;
+    width: 704px;
+    height: 312px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    outline: 1px solid blue;
+    width: 1034px;
+    height: 313px;
+  }
 }
 
 .registration__title {
@@ -21,7 +33,8 @@
   background: #3d2c2c;
   opacity: 0.6;
   border-radius: 10px;
-  background-image: url(../images/registration_img/registration_bg.png);
+  background-image: url(../images/registration_img/fill.png),
+    url(../images/registration_img/registration_bg.png);
   background-size: cover;
   width: 280px;
   height: 394px;
@@ -29,11 +42,26 @@
   padding-left: 7px;
   padding-right: 8px;
 
-  @media screen and (min-width:768px) {
-    flex-direction: row;
-    
+  @media screen and (min-width: 768px) {
+    background-image: { display: none};
+   
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 }
+
+
+
+
+
+
+
+
+//   @media screen and (min-width:768px) {
+//     flex-direction: row;
+//   }
+// }
 
 .registration__form__date {
   font-family: 'Montserrat';
@@ -109,4 +137,3 @@
   height: 40px;
   margin-bottom: 32px;
 }
-
