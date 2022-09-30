@@ -1,7 +1,8 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  font-weight: 400;
   color: #3c322d;
   background-color: rgba(243, 132, 140, 0.12);
 }
@@ -82,7 +83,7 @@ img {
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
-  color: #2E2520;
+  color: #2e2520;
 }
 
 .contact__text {
@@ -171,4 +172,4 @@ img {
     width: 394px;
     height: 289px;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
