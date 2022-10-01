@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
 .hero-section {
-  
-
   padding-top: 16px;
   padding-bottom: 8px;
 
@@ -17,20 +14,14 @@
     height: 50px;
     top: 104px;
     left: 38px;
-
-  
-    
   }
 
   background-image: url('../images/images-hero/hero-image-1x-mob-min.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url('../images/images-hero/hero-image-2x-mob-min.jpg');
   }
 
@@ -41,10 +32,8 @@
     background-size: 100%;
     background-image: url('../images/images-hero/hero-image-2x-tabl-min.jpg');
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url("../images/images-hero/hero-image-2x-tabl-min.jpg");
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/images-hero/hero-image-2x-tabl-min.jpg');
     }
 
     .hero-section:after {
@@ -52,8 +41,6 @@
       height: 100px;
       top: 92px;
       left: 268px;
-
-     
     }
   }
 
@@ -62,208 +49,58 @@
     padding-bottom: 90px;
     background-size: 100%;
     background-image: url('../images/images-hero/hero-image-1x-min.jpg');
-    
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/images-hero/hero-image-2x-min.jpg');
     }
-    }
-  }
-
-  .hero-title-text {
-    margin-bottom: 18px;
-  
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight:600;
-    font-size: 28px;
-    line-height: 1.21;
-    letter-spacing: -0.03em;
-  
-    @media screen and (min-width: 768px) {
-      width: 319px;
-  
-      margin-bottom: 10px;
-  
-      font-size: 30px;
-      line-height: 1.23;
-    }
-  
-    @media screen and (min-width: 1200px) {
-      width: 757px;
-  
-      margin-bottom: 20px;
-  
-      font-size: 60px;
-      line-height: 1.08;
-    }
-  }
-  
-  .hero-title__post {
-    margin-bottom: 28px;
-  
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-style: normal;
-    font-weight:500;
-    font-size: inherit;
-    line-height: 1.25;
-  
-    @media screen and (min-width: 768px) {
-      margin-bottom: 24px;
-    }
-  
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 28px;
-  
-      font-size: 24px;
-      line-height: 1.21;
-    }
-  }
-
-=======
-.hero {
-  padding-bottom: 10px;
-
-
-  @media screen and (min-width: 768px) {
-    padding-bottom: 18px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-bottom: 32px;
   }
 }
 
+.hero-title-text {
+  margin-bottom: 18px;
 
-.hero__container {
-
-  background-color: $pink-clr;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(/image/hero-mob-min.jpg);
-  background-size: cover;
-  // padding-top: 86px;
-
-  @media screen and (min-device-pixel-ratio: 2),
-  screen and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-    background-image: url(/image/hero-mob@2x-min.png);
-    background-size: cover;
-  }
-
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-    height: 345px;
-    // padding-top: 98px;
-
-    background-image: url(/image/hero-tablet-min.jpg);
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: url(/image/hero-tablet@2x-min.jpg);
-      background-size: cover;
-
-    }
-  }
-
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-    width: 100%;
-    height: 556px;
-    // padding-top: 171px;
-
-    background-image: url(/image/hero-desktop-min.jpg);
-    background-size: cover;
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: url(/image/hero-desktop@2x-min.jpg);
-      background-size: cover;
-    }
-  }
-}
-
-.hero__title {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 280px;
-  font-family: 'Montserrat Alternates';
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 600;
   font-size: 28px;
-  line-height: 1.2;
+  line-height: 1.21;
   letter-spacing: -0.03em;
-  color: $brown-clr;
-  padding-top: 86px;
-
 
   @media screen and (min-width: 768px) {
+    width: 319px;
+
+    margin-bottom: 10px;
+
     font-size: 30px;
-    max-width: 319px;
     line-height: 1.23;
-    text-align: start;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 98px;
   }
 
-  @media screen and (min-width: 1280px) {
-    max-width: 757px;
-    font-weight: 600;
+  @media screen and (min-width: 1200px) {
+    width: 757px;
+
+    margin-bottom: 20px;
+
     font-size: 60px;
     line-height: 1.08;
-    color: $brown-clr;
-    padding-top: 171px;
   }
 }
 
-.hero__text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  color: $brown-clr;
-  margin-top: 18px;
+.hero-title__post {
   margin-bottom: 28px;
 
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.25;
+
   @media screen and (min-width: 768px) {
-    text-align: start;
-    margin-top: 10px;
     margin-bottom: 24px;
   }
 
-  @media screen and (min-width: 1280px) {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.2;
-    color: $brown-clr;
-    margin-top: 20px;
+  @media screen and (min-width: 1200px) {
     margin-bottom: 28px;
+
+    font-size: 24px;
+    line-height: 1.21;
   }
 }
-
-.button--primary {
-  outline: none;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-  }
-}
-
-.social-list--primary {
-  margin-top: 28px;
-
-  @media screen and (min-width: 768px) {
-    margin: 20px 0 0;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin: 32px 0 0;
-  }
-}
->>>>>>> Stashed changes
