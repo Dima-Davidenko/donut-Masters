@@ -2,22 +2,20 @@
   display: flex;
   width: 80px;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 28px;
 
   @media screen and (min-width: 768px) {
-    margin-top: 31px;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-top: 35px;
   }
 }
+
 .soc-list__link:focus,
-.soc-list__link:hover {
+.soc-list__link:hover,
+.soc-list__link:active {
   color: $pink-clr;
   outline: none;
+  transition: color 250ms $animation;
 }
 
 .soc-list__icon {

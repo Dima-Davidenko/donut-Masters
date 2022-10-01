@@ -1,41 +1,94 @@
 <header class="header">
   <div class="container header__container">
     <nav class="header__nav">
-      <a href="#">
+      <a class="header__logo" href="#">
         <svg class="logo">
           <use href="./images/icons.svg#icon-logo"></use>
         </svg>
       </a>
-      <ul class="header__nav-list mob-menu">
+      <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="#">About us</a>
+          <a class="header__nav-link" href="#">About us</a>
         </li>
 
         <li class="header__nav-item">
-          <a href="#">Program</a>
+          <a class="header__nav-link" href="#">Program</a>
         </li>
 
         <li class="header__nav-item">
-          <a href="#">Speakers</a>
+          <a class="header__nav-link" href="#">Speakers</a>
         </li>
 
         <li class="header__nav-item">
-          <a href="#">Price</a>
+          <a class="header__nav-link" href="#">Price</a>
         </li>
 
         <li class="header__nav-item">
-          <a href="#">Reviews</a>
+          <a class="header__nav-link" href="#">Reviews</a>
         </li>
 
         <li class="header__nav-item">
-          <a href="#">Contacts</a>
+          <a class="header__nav-link" href="#">Contacts</a>
         </li>
       </ul>
     </nav>
-    <button class="mob-menu__button" type="button">
+    <button class="mob-menu__button-open" type="button">
       <svg class="mob-menu__icon mob-menu__icon--open">
         <use href="./images/icons.svg#icon-menu-burger"></use>
       </svg>
     </button>
+    <div class="mob-menu container">
+      <nav class="mob-menu__nav">
+        <a class="mob-menu__logo" href="#">
+          <svg class="logo">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <ul class="mob-menu__nav-list">
+          <li class="mob-menu__nav-item">
+            <a class="mob-menu__nav-link" href="#">About us</a>
+          </li>
+
+          <li class="mob-menu__nav-item">
+            <a class="mob-menu__nav-link" href="#">Program</a>
+          </li>
+
+          <li class="mob-menu__nav-item">
+            <a class="mob-menu__nav-link" href="#">Speakers</a>
+          </li>
+
+          <li class="mob-menu__nav-item">
+            <a class="mob-menu__nav-link" href="#">Price</a>
+          </li>
+
+          <li class="mob-menu__nav-item">
+            <a class="mob-menu__nav-link" href="#">Reviews</a>
+          </li>
+
+          <li class="mob-menu__nav-item">
+            <a class="mob-menu__nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="mob-menu__button-close" type="button">
+        <svg class="mob-menu__icon mob-menu__icon--close">
+          <use href="./images/icons.svg#icon-close-cross"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
+<script>
+  (() => {
+    const mobileMenu = document.querySelector('.mob-menu');
+    const menuBtnOpen = document.querySelector('.mob-menu__button-open');
+    const menuBtnClose = document.querySelector('.mob-menu__button-close');
+
+    const toggleMenu = () => {
+      mobileMenu.classList.toggle('is-mob-menu-open');
+    };
+
+    menuBtnOpen.addEventListener('click', toggleMenu);
+    menuBtnClose.addEventListener('click', toggleMenu);
+  })();
+</script>
