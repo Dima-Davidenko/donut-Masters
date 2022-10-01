@@ -2,11 +2,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
 }
 .header__container {
   position: relative;
-  padding-top: 36px;
+  padding-top: 16px;
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 36px;
+  }
 }
 .header__nav {
   @media screen and (min-width: 1280px) {
@@ -24,8 +30,14 @@
 }
 .header__nav-item {
   @media screen and (min-width: 1280px) {
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+  }
+}
+.header__nav-link {
+  padding: 4px 8px;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: linear-gradient(rgba(248, 110, 103, 0.63) 0%, rgba(253, 86, 143, 0.86) 100%);
+    box-shadow: 0 7px 27px -2px rgb(253 88 140 / 35%);
   }
 }
