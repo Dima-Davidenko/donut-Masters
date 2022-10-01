@@ -1,21 +1,20 @@
-.hero-section {
-  padding-top: 16px;
-  padding-bottom: 8px;
-
-  min-height: 320px;
+.hero {
+  height: 312px;
+  margin-bottom: 10px;
   text-align: center;
-
-  .hero-section:after {
-    display: block;
-    content: '';
-
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 104px;
-    left: 38px;
+  @media screen and (min-width: 768px) {
+    height: 345px;
+    margin-bottom: 18px;
+    text-align: left;
   }
-
+  @media screen and (min-width: 1280px) {
+    height: 556px;
+    margin-bottom: 32px;
+  }
+}
+.hero__container {
+  height: 100%;
+  padding: 86px 20px 8px;
   background-image: url('../images/images-hero/hero-image-1x-mob-min.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,8 +25,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding-top: 24px;
-    padding-bottom: 43px;
+    padding: 98px 31px 43px;
     text-align: left;
     background-size: 100%;
     background-image: url('../images/images-hero/hero-image-2x-tabl-min.jpg');
@@ -35,18 +33,10 @@
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/images-hero/hero-image-2x-tabl-min.jpg');
     }
-
-    .hero-section:after {
-      width: 100px;
-      height: 100px;
-      top: 92px;
-      left: 268px;
-    }
   }
 
-  @media screen and (min-width: 1100px) {
-    padding-top: 6px;
-    padding-bottom: 90px;
+  @media screen and (min-width: 1280px) {
+    padding: 171px 16px 90px;
     background-size: 100%;
     background-image: url('../images/images-hero/hero-image-1x-min.jpg');
 
@@ -55,7 +45,6 @@
     }
   }
 }
-
 .hero-title-text {
   margin-bottom: 18px;
 
@@ -72,9 +61,10 @@
 
     font-size: 30px;
     line-height: 1.23;
+    letter-spacing: 0em;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     width: 757px;
 
     margin-bottom: 20px;
@@ -97,10 +87,29 @@
     margin-bottom: 24px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 28px;
 
     font-size: 24px;
     line-height: 1.21;
+  }
+}
+.hero__button {
+  margin-bottom: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 32px;
+  }
+}
+.hero__soc-list {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
   }
 }
