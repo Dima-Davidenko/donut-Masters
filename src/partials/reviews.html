@@ -1,25 +1,194 @@
-<section class="container">
-<h2 class="section__title reviews__tittle--position">Reviews</h2>
-<picture>
-    <source
-    srcset="./images/reviews/desktop/will-min.png 1x, 
-    ./images/reviews/desktop/will@2x-min.png 2x"
-    media="(min-width:1280px)"/>
-    <source srcset="./images/reviews/tablet/will-min.png 1x, 
-    ./images/reviews/tablet/will@2x-min.png 2x" 
-    media="(min-width:768px)"/>
-    <source srcset="./images/reviews/mobile/will-min.png 1x, 
-    ./images/reviews/mobile/will@2x-min.png 2x"
-     media="(max-width:767px)"/>
-     <img src="./images/reviews/mobile/will-min.png" 
-     alt="will"/>
-</picture>
-<h3 class="reviews__name">Will</h3>
-<p class="reviews__description">Last time I have visited a cooking course by Eva 
-    I was impressed with the way she explained everything
-    to people. You can be sure you will manage to cook a delicious 
-    dish even if it is your first time in the kitchen!
-   Thank you so much for the masterclass! Looking forward to 
-   the next one and highly recommend it to everyone!</p>
-   <span class="reviews__number">2/15</span>
+<section class="reviews container" id="reviews">
+  <h2 class="section__title reviews__tittle--position">Reviews</h2>
+  <ul class="reviews__list">
+    <li class="reviews__sample">
+      <picture>
+        <source
+          srcset="
+            ./images/reviews/desktop/will-min.png    1x,
+            ./images/reviews/desktop/will@2x-min.png 2x
+          "
+          media="(min-width:1280px)"
+        />
+        <source
+          srcset="
+            ./images/reviews/tablet/will-min.png    1x,
+            ./images/reviews/tablet/will@2x-min.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/reviews/mobile/will-min.png    1x,
+            ./images/reviews/mobile/will@2x-min.png 2x
+          "
+          media="(max-width:767px)"
+        />
+        <img
+          class="reviews__image reviews__eletmtnts--position"
+          src="./images/reviews/mobile/will-min.png"
+          alt="will"
+        />
+      </picture>
+
+      <div class="reviews__score">
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+      </div>
+
+      <h3 class="reviews__name reviews__name--position">Will</h3>
+
+      <p class="reviews__description reviews__description--position">
+        Last time I have visited a cooking course by Eva I was impressed with the way she explained
+        everything to people. You can be sure you will manage to cook a delicious dish even if it is
+        your first time in the kitchen! Thank you so much for the masterclass! Looking forward to
+        the next one and highly recommend it to everyone!
+      </p>
+
+      <span class="reviews__order">
+        <svg class="order__icon" width="35" height="2">
+          <use href="./images/icons.svg#icon-horiz-bar"></use>
+        </svg>
+        2/15
+        <svg class="order__icon" width="35" height="2">
+          <use href="./images/icons.svg#icon-horiz-bar"></use>
+        </svg>
+      </span>
+    </li>
+
+    <li class="reviews__sample reviews__sample--display reviews--left">
+      <picture>
+        <source
+          srcset="
+            ./images/reviews/desktop/john-min.png    1x,
+            ./images/reviews/desktop/john@2x-min.png 2x
+          "
+          media="(min-width:1280px)"
+        />
+        <source
+          srcset="
+            ./images/reviews/tablet/john-min.png    1x,
+            ./images/reviews/tablet/john@2x-min.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <img
+          class="reviews__picture reviews__eletmtnts--position"
+          src="./images/reviews/tablet/john-min.png"
+          alt="john"
+        />
+      </picture>
+      <div class="reviews__score">
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-stroke"></use>
+        </svg>
+      </div>
+      <h3 class="reviews__name reviews__eletmtnts--position">John</h3>
+      <p class="reviews__description reviews__description--position reviews__description--display">
+        Last time I have visited a cooking course by Eva I was impressed with the way she explained
+        everything to people. You can be sure you will manage to cook a delicious dish even if it is
+        your first time in the kitchen! Thank you so much for the masterclass! Looking forward to
+        the next one and highly recommend it to everyone!
+      </p>
+      <span class="reviews__description--display">
+        <div class="order__icon">
+          <svg width="35" height="1">
+            <use href="./images/icons.svg#icon-horiz-bar"></use>
+          </svg>
+        </div>
+        2/15
+        <div class="order__icon">
+          <svg width="35" height="1">
+            <use href="./images/icons.svg#icon-horiz-bar"></use>
+          </svg></div
+      ></span>
+    </li>
+
+    <li class="reviews__sample reviews__sample--display reviews--right">
+      <picture class="reviews__picture">
+        <source
+          srcset="
+            ./images/reviews/desktop/elisabeth-min.png    288w,
+            ./images/reviews/desktop/elisabeth@2x-min.png 576w
+          "
+          media="(min-width:1280px)"
+          sizes="288px"
+        />
+        <source
+          srcset="
+            ./images/reviews/tablet/elisabeth-min.png    152w,
+            ./images/reviews/tablet/elisabeth@2x-min.png 304w
+          "
+          media="(min-width:768px)"
+          sizes="152px"
+        />
+        <img
+          class="reviews__picture reviews__eletmtnts--position"
+          src="./images/reviews/tablet/elisabeth-min.png"
+          alt="elisabeth"
+        />
+      </picture>
+      <div class="reviews__score">
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-star-filled"></use>
+        </svg>
+      </div>
+      <h3 class="reviews__name reviews__eletmtnts--position">Elisabeth</h3>
+      <p class="reviews__description reviews__description--position reviews__description--display">
+        Last time I have visited a cooking course by Eva I was impressed with the way she explained
+        everything to people. You can be sure you will manage to cook a delicious dish even if it is
+        your first time in the kitchen! Thank you so much for the masterclass! Looking forward to
+        the next one and highly recommend it to everyone!
+      </p>
+      <span class="reviews__description--display">
+        <div class="order__icon">
+          <svg width="35" height="1">
+            <use href="./images/icons.svg#icon-horiz-bar"></use>
+          </svg>
+        </div>
+        2/15
+        <div class="order__icon">
+          <svg width="35" height="1">
+            <use href="./images/icons.svg#icon-horiz-bar"></use>
+          </svg></div
+      ></span>
+    </li>
+  </ul>
 </section>
