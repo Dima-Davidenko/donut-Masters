@@ -1,85 +1,173 @@
-.container__about-us {
+.about-us__container {
+  max-width: 480px;
+  padding-top: 10px;
+  padding-bottom: 14px;
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-        justify-content: space-between;
-    }
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 1280px;
+    padding-bottom: 50px;
+    padding-top: 32px;
+  }
 }
 
 .about-us__history {
+  @media screen and (min-width: 768px) {
+    width: 337px;
+  }
 
-    @media screen and (min-width: 768px) {
-        width: 337px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        width: 608px;
-    }
+  @media screen and (min-width: 1280px) {
+    width: 608px;
+  }
 }
-
 
 .about-us__title {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.2;
-    color: $brown-clr;
-    margin-bottom: 8px;
-    margin-top: 28px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $brown-clr;
+  margin-bottom: 8px;
+  margin-top: 28px;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 28px;
-        font-size: 32px;
-        line-height: 1.21;
-        margin-top: 0;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 28px;
+    font-size: 32px;
+    line-height: 1.21;
+    margin-top: 0;
+  }
 
-    @media screen and (min-width: 1280px) {}
+  // @media screen and (min-width: 1280px) {
+  // }
 }
-
 
 .about-us__text {
-    font-size: 16px;
-    line-height: 1.25;
-    color: $brown-clr;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $brown-clr;
 
-    @media screen and (min-width: 768px) {}
+  // @media screen and (min-width: 768px) {
+  // }
 
-    @media screen and (min-width: 1280px) {
-        margin-bottom: 30px;
-        font-size: 18px;
-        line-height: 1.22;
-    }
-}
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.22;
+  }
 
-
-.about-us__text:nth-child(2) {
+  &:nth-child(2) {
     margin-bottom: 20px;
-}
+  }
 
-
-.about-us__text:last-child {
+  &:last-child {
     display: none;
 
-    @media screen and (min-width: 768px) {}
+    // @media screen and (min-width: 768px) {
+    // }
 
     @media screen and (min-width: 1280px) {
-        display: contents;
+      display: contents;
     }
+  }
 }
-
 
 .about-us__img {
-    width: 280px;
-    height: 285px;
-    width: 100%;
+  width: 100%;
 
-    @media screen and (min-width: 768px) {
-        width: 336px;
-        height: 359px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    height: 359px;
+  }
 
-    @media screen and (min-width: 1280px) {
-        width: 608px;
-        height: 381px;
-    }
+  @media screen and (min-width: 1280px) {
+    width: 608px;
+    height: 381px;
+  }
 }
+
+// .container__about-us {
+
+//     @media screen and (min-width: 768px) {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
+
+// .about-us__history {
+
+//     @media screen and (min-width: 768px) {
+//         width: 337px;
+//     }
+
+//     @media screen and (min-width: 1280px) {
+//         width: 608px;
+//     }
+// }
+
+// .about-us__title {
+//     font-weight: 500;
+//     font-size: 24px;
+//     line-height: 1.2;
+//     color: $brown-clr;
+//     margin-bottom: 8px;
+//     margin-top: 28px;
+
+//     @media screen and (min-width: 768px) {
+//         margin-bottom: 28px;
+//         font-size: 32px;
+//         line-height: 1.21;
+//         margin-top: 0;
+//     }
+
+//     @media screen and (min-width: 1280px) {}
+// }
+
+// .about-us__text {
+//     font-size: 16px;
+//     line-height: 1.25;
+//     color: $brown-clr;
+
+//     @media screen and (min-width: 768px) {}
+
+//     @media screen and (min-width: 1280px) {
+//         margin-bottom: 30px;
+//         font-size: 18px;
+//         line-height: 1.22;
+//     }
+// }
+
+// .about-us__text:nth-child(2) {
+//     margin-bottom: 20px;
+// }
+
+// .about-us__text:last-child {
+//     display: none;
+
+//     @media screen and (min-width: 768px) {}
+
+//     @media screen and (min-width: 1280px) {
+//         display: contents;
+//     }
+// }
+
+// .about-us__img {
+//     width: 280px;
+//     height: 285px;
+//     width: 100%;
+
+//     @media screen and (min-width: 768px) {
+//         width: 336px;
+//         height: 359px;
+//     }
+
+//     @media screen and (min-width: 1280px) {
+//         width: 608px;
+//         height: 381px;
+//     }
+// }
