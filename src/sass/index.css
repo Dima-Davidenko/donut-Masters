@@ -143,11 +143,9 @@ img {
 }
 
 .soc-list__link:focus,
-.soc-list__link:hover,
-.soc-list__link:active {
+.soc-list__link:hover {
   color: #f3848c;
   outline: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-list__icon {
@@ -197,26 +195,110 @@ img {
   }
 }
 
-.hero-title {
-  background-image: url(../images/images-hero/hero-image-1x-min.jpg);
-  width: 1200px;
-  height: auto;
-  padding: 171px 507px 90px 16px;
+.hero-section {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  min-height: 320px;
+  text-align: center;
+  background-image: url("../images/images-hero/hero-image-1x-mob-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero-section .hero-section:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 104px;
+  left: 38px;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url("../images/images-hero/hero-image-2x-mob-min.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 24px;
+    padding-bottom: 43px;
+    text-align: left;
+    background-size: 100%;
+    background-image: url("../images/images-hero/hero-image-2x-tabl-min.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url("../images/images-hero/hero-image-2x-tabl-min.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section .hero-section:after {
+    width: 100px;
+    height: 100px;
+    top: 92px;
+    left: 268px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .hero-section {
+    padding-top: 6px;
+    padding-bottom: 90px;
+    background-size: 100%;
+    background-image: url("../images/images-hero/hero-image-1x-min.jpg");
+  }
+}
+@media screen and (min-width: 1100px) and (min-device-pixel-ratio: 2), screen and (min-width: 1100px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1100px) and (min-resolution: 192dpi), screen and (min-width: 1100px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url("../images/images-hero/hero-image-2x-min.jpg");
+  }
 }
 
 .hero-title-text {
-  max-width: 757px;
-  height: 130px;
-  font-size: 60px;
-  line-height: 0.89;
-  text-align: left;
+  margin-bottom: 18px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+}
+@media screen and (min-width: 768px) {
+  .hero-title-text {
+    width: 319px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title-text {
+    width: 757px;
+    margin-bottom: 20px;
+    font-size: 60px;
+    line-height: 1.08;
+  }
 }
 
 .hero-title__post {
-  font-style: 500;
-  font-size: 24px;
-  line-height: 1.2;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.25;
+}
+@media screen and (min-width: 768px) {
+  .hero-title__post {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title__post {
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -378,6 +460,31 @@ img {
   }
 }
 
+.price-list__item::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' fill='white' stroke='%23F3848C'/%3E%3Cg filter='url(%23filter0_f_12430_121)'%3E%3Ccircle cx='12' cy='12' r='10' fill='white'/%3E%3Ccircle cx='12' cy='12' r='9.75' stroke='%23F3848C' stroke-width='0.5' stroke-linecap='round' stroke-dasharray='2 2'/%3E%3C/g%3E%3Cpath d='M7 8.21452C7 9.27423 7.77363 10.1543 8.78548 10.325V13.5717C8.78548 13.6664 8.82311 13.7573 8.8901 13.8242C8.95708 13.8912 9.04793 13.9289 9.14265 13.9289H14.8577C14.9524 13.9289 15.0433 13.8912 15.1103 13.8242C15.1772 13.7573 15.2149 13.6664 15.2149 13.5717V10.325C16.2264 10.1539 17 9.27423 17 8.21452C17 7.03265 16.0389 6.0715 14.857 6.0715H14.0487C13.5962 5.42467 12.8472 5 12 5C11.1528 5 10.4035 5.42467 9.95128 6.0715H9.14265C8.57453 6.07217 8.02987 6.29817 7.62817 6.69993C7.22648 7.10169 7.00057 7.64639 7 8.21452ZM9.49982 12.8581H14.5005V13.2145H9.49982V12.8581ZM9.14301 6.78584H9.60519C9.53566 7.0176 9.50017 7.25822 9.49982 7.50018C9.49982 7.59491 9.53745 7.68575 9.60443 7.75273C9.67142 7.81972 9.76226 7.85735 9.85699 7.85735C9.95172 7.85735 10.0426 7.81972 10.1095 7.75273C10.1765 7.68575 10.2142 7.59491 10.2142 7.50018C10.2142 6.51547 11.0153 5.71434 12 5.71434C12.9847 5.71434 13.7858 6.51547 13.7858 7.50018C13.7858 7.59491 13.8235 7.68575 13.8905 7.75273C13.9574 7.81972 14.0483 7.85735 14.143 7.85735C14.2377 7.85735 14.3286 7.81972 14.3956 7.75273C14.4625 7.68575 14.5002 7.59491 14.5002 7.50018C14.5002 7.25195 14.4627 7.01264 14.3948 6.78584H14.857C15.6449 6.78584 16.2857 7.4266 16.2857 8.21452C16.2853 8.59278 16.135 8.95548 15.8678 9.22319C15.6005 9.4909 15.2381 9.64179 14.8598 9.64283L14.8577 9.64247C14.8107 9.64241 14.7642 9.65165 14.7208 9.66967C14.6774 9.6877 14.638 9.71414 14.6048 9.74748C14.5715 9.78061 14.545 9.82001 14.527 9.86341C14.509 9.90682 14.4998 9.95336 14.4998 10.0004L14.5005 10.0039V12.1437H9.49982V10.0021L9.50018 10.0004C9.50027 9.95336 9.49109 9.90681 9.47316 9.86337C9.45523 9.81993 9.42891 9.78046 9.39569 9.74721C9.36248 9.71397 9.32303 9.6876 9.27961 9.66963C9.23619 9.65166 9.18965 9.64243 9.14265 9.64247L9.14051 9.64283C8.76218 9.64189 8.39966 9.49103 8.13234 9.22331C7.86502 8.9556 7.71471 8.59284 7.71434 8.21452C7.71434 7.4266 8.3551 6.78584 9.14301 6.78584ZM15.9278 15.3579H8.07222C7.97749 15.3579 7.88665 15.3955 7.81966 15.4625C7.75268 15.5295 7.71505 15.6203 7.71505 15.7151C7.71505 15.8098 7.75268 15.9006 7.81966 15.9676C7.88665 16.0346 7.97749 16.0722 8.07222 16.0722H15.9278C16.0225 16.0722 16.1134 16.0346 16.1803 15.9676C16.2473 15.9006 16.2849 15.8098 16.2849 15.7151C16.2849 15.6203 16.2473 15.5295 16.1803 15.4625C16.1134 15.3955 16.0225 15.3579 15.9278 15.3579ZM15.9278 16.4294H8.07222C7.97749 16.4294 7.88665 16.467 7.81966 16.534C7.75268 16.601 7.71505 16.6918 7.71505 16.7866C7.71505 16.8813 7.75268 16.9721 7.81966 17.0391C7.88665 17.1061 7.97749 17.1437 8.07222 17.1437H15.9278C16.0225 17.1437 16.1134 17.1061 16.1803 17.0391C16.2473 16.9721 16.2849 16.8813 16.2849 16.7866C16.2849 16.6918 16.2473 16.601 16.1803 16.534C16.1134 16.467 16.0225 16.4294 15.9278 16.4294ZM14.1423 17.5102H9.8577C9.76298 17.5102 9.67213 17.5478 9.60515 17.6148C9.53817 17.6818 9.50054 17.7726 9.50054 17.8673C9.50054 17.9621 9.53817 18.0529 9.60515 18.1199C9.67213 18.1869 9.76298 18.2245 9.8577 18.2245H14.1423C14.237 18.2245 14.3279 18.1869 14.3949 18.1199C14.4618 18.0529 14.4995 17.9621 14.4995 17.8673C14.4995 17.7726 14.4618 17.6818 14.3949 17.6148C14.3279 17.5478 14.237 17.5102 14.1423 17.5102Z' fill='black'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_12430_121' x='1.8' y='1.8' width='20.4' height='20.4' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='0.1' result='effect1_foregroundBlur_12430_121'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.price__text {
+  display: inline-block;
+}
+
+.price {
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 24px;
+  padding: 20px;
+}
+
+.price__item {
+  position: relative;
+}
+
 .reviews__tittle--position {
   margin-bottom: 27px;
 }
@@ -403,151 +510,6 @@ img {
   border-color: #f3848c;
   cursor: pointer;
 }
-.modal__input:hover .contact__container,
-.modal__input:focus .contact__container,
-.modal__textarea:focus .contact__container,
-.modal__textarea:hover .contact__container {
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
-  .modal__input:hover .contact__container,
-.modal__input:focus .contact__container,
-.modal__textarea:focus .contact__container,
-.modal__textarea:hover .contact__container {
-    padding-top: 34px;
-    padding-bottom: 80px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .modal__input:hover .contact__container,
-.modal__input:focus .contact__container,
-.modal__textarea:focus .contact__container,
-.modal__textarea:hover .contact__container {
-    padding-top: 63px;
-    padding-bottom: 100px;
-  }
-}
-.modal__input:hover .contact__input,
-.modal__input:hover .contact__textarea,
-.modal__input:focus .contact__input,
-.modal__input:focus .contact__textarea,
-.modal__textarea:focus .contact__input,
-.modal__textarea:focus .contact__textarea,
-.modal__textarea:hover .contact__input,
-.modal__textarea:hover .contact__textarea {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #000000;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background-color: transparent;
-  outline: none;
-  width: 100%;
-  font-style: inherit;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal__input:hover .contact__input:hover, .modal__input:hover .contact__input:focus, .modal__input:hover .contact__input:focus, .modal__input:hover .contact__input:hover,
-.modal__input:hover .contact__textarea:hover,
-.modal__input:hover .contact__textarea:focus,
-.modal__input:hover .contact__textarea:focus,
-.modal__input:hover .contact__textarea:hover,
-.modal__input:focus .contact__input:hover,
-.modal__input:focus .contact__input:focus,
-.modal__input:focus .contact__input:focus,
-.modal__input:focus .contact__input:hover,
-.modal__input:focus .contact__textarea:hover,
-.modal__input:focus .contact__textarea:focus,
-.modal__input:focus .contact__textarea:focus,
-.modal__input:focus .contact__textarea:hover,
-.modal__textarea:focus .contact__input:hover,
-.modal__textarea:focus .contact__input:focus,
-.modal__textarea:focus .contact__input:focus,
-.modal__textarea:focus .contact__input:hover,
-.modal__textarea:focus .contact__textarea:hover,
-.modal__textarea:focus .contact__textarea:focus,
-.modal__textarea:focus .contact__textarea:focus,
-.modal__textarea:focus .contact__textarea:hover,
-.modal__textarea:hover .contact__input:hover,
-.modal__textarea:hover .contact__input:focus,
-.modal__textarea:hover .contact__input:focus,
-.modal__textarea:hover .contact__input:hover,
-.modal__textarea:hover .contact__textarea:hover,
-.modal__textarea:hover .contact__textarea:focus,
-.modal__textarea:hover .contact__textarea:focus,
-.modal__textarea:hover .contact__textarea:hover {
-  border-color: #f3848c;
-  cursor: pointer;
-}
-.modal__input:hover .contact__title,
-.modal__input:focus .contact__title,
-.modal__textarea:focus .contact__title,
-.modal__textarea:hover .contact__title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.2;
-  text-align: center;
-  color: #2e2520;
-}
-.modal__input:hover .contact__text,
-.modal__input:focus .contact__text,
-.modal__textarea:focus .contact__text,
-.modal__textarea:hover .contact__text {
-  font-weight: 400;
-  line-height: 1.25;
-  text-align: center;
-  color: #3c322d;
-  margin-top: 27px;
-  margin-bottom: 17px;
-}
-@media screen and (min-width: 768px) {
-  .modal__input:hover .contact__text,
-.modal__input:focus .contact__text,
-.modal__textarea:focus .contact__text,
-.modal__textarea:hover .contact__text {
-    margin-bottom: 27px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .modal__input:hover .contact__text,
-.modal__input:focus .contact__text,
-.modal__textarea:focus .contact__text,
-.modal__textarea:hover .contact__text {
-    margin-bottom: 16px;
-  }
-}
-.modal__input:hover .contact__textarea,
-.modal__input:focus .contact__textarea,
-.modal__textarea:focus .contact__textarea,
-.modal__textarea:hover .contact__textarea {
-  margin-top: 20px;
-  margin-bottom: 28px;
-}
-.modal__input:hover .contact__form,
-.modal__input:focus .contact__form,
-.modal__textarea:focus .contact__form,
-.modal__textarea:hover .contact__form {
-  max-width: 336px;
-  width: 100%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  .modal__input:hover .contact__form,
-.modal__input:focus .contact__form,
-.modal__textarea:focus .contact__form,
-.modal__textarea:hover .contact__form {
-    width: 336px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .modal__input:hover .contact__form,
-.modal__input:focus .contact__form,
-.modal__textarea:focus .contact__form,
-.modal__textarea:hover .contact__form {
-    width: 394px;
-  }
-}
 
 .contact {
   margin-top: 40px;
@@ -558,7 +520,7 @@ img {
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
-  color: #2e2520;
+  color: #2E2520;
 }
 
 .contact__text {
