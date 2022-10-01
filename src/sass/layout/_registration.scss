@@ -17,7 +17,6 @@
 .registration__title {
   text-align: center;
   margin-bottom: 27px;
-
 }
 
 .registration__form {
@@ -34,15 +33,13 @@
   padding-left: 7px;
   padding-right: 8px;
   padding-bottom: 20px;
-  background-image: linear-gradient(rgba(61, 44, 44, 0.6),rgba(61, 44, 44, 0.6)), url('../images/registration_img/registration_bg.png');
- 
+  background-image: linear-gradient(rgba(61, 44, 44, 0.6), rgba(61, 44, 44, 0.6)),
+    url('../images/registration_img/registration_bg.png');
+  box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+  background-color:  #3D2C2C;
 
-  // box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
-  // background-color:  #3D2C2C;
-  // opacity: 0.6;
 
   @media screen and (min-width: 768px) {
-    // background: none;
     width: 704px;
     height: 246px;
     font-style: normal;
@@ -53,41 +50,22 @@
     color: #000000;
     padding-top: 20px;
     margin: 0 auto;
-    background-image: linear-gradient(rgba(61, 44, 44, 0.6),rgba(61, 44, 44, 0.6)), url('../images/registration_img/tablet_img.png');
+    background-image: linear-gradient(rgba(61, 44, 44, 0.6), rgba(61, 44, 44, 0.6)),
+      url('../images/registration_img/tablet_img.png');
     background-size: contain;
-    background-position-x:right;
-    background-position-y:bottom;
+    background-position-x: right;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     z-index: -10;
   }
 
   @media screen and (min-width: 1280px) {
-    // background: none;
     max-width: 1034px;
     width: 100%;
     height: 246px;
-
   }
 }
 
-.registration__form__img1 {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-  
-    width: 453px;
-    min-height: 246px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -5;
-    @media screen and(min-width:1280px) {
-      width: 454px;
-      height:246px;
-
-    }
-  }
-}
 
 .registration__form__img2 {
   display: none;
@@ -103,7 +81,6 @@
   @media screen and(min-width:1280px) {
     width: 972px;
     height: 246px;
-
   }
 }
 
@@ -121,16 +98,13 @@
 .registration__wrap {
   display: flex;
   flex-direction: column;
- align-items: center; 
-  
-  
+  align-items: center;
 
-@media screen and (min-width: 768px) {
-    height:100%;
+  @media screen and (min-width: 768px) {
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-
   }
 }
 
@@ -176,27 +150,32 @@
     color: #000000;
   }
 
+  @media screen and(min-width:1280px) {
+    margin-right: 28px;
+  }
+}
+
+.registration__form__right-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 74px;
+    width: 250px;
+  }
 
   @media screen and(min-width:1280px) {
-    margin-right: 28px ;
+    width: 270px;
+    margin-right: 0;
   }
-
-
-}
-
-.registration__form__right-part{
-  @media screen and(min-width:768px) {
-      margin-right:74px;
-  // display: flex;
-  // justify-content: start;
-  }
-
-
 }
 
 
-///////////////////////////////////////////////////////
-.registration__vl{
+.registration__vl {
   display: none;
   @media screen and(min-width:768px) {
     display: inline-block;
@@ -209,10 +188,8 @@
   @media screen and(min-width:1280px) {
     margin-right: 28px;
   }
-   
 }
 
-//////////////////////////////////////////////////
 
 .registration__form__subtitle {
   font-weight: 400;
@@ -231,8 +208,14 @@
     line-height: 22px;
     text-align: start;
     color: #000000;
-    width: 200px;
+    min-width: 200px;
+  }
 
+  @media screen and(min-width:1280px) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3c322d;
   }
 }
 .registration__form__input {
@@ -242,8 +225,17 @@
   border: none;
   border-bottom: 1px solid #ffffff;
   margin-bottom: 20px;
+  color: white;
   @media screen and (min-width: 768px) {
+    color: $brown-clr;
     border-bottom: 1px solid black;
+    width: 237px;
+    height: 20px;
+  }
+
+  @media screen and(min-width:1280px) {
+    width:210px;
+    height: 20px;
   }
 
   &::placeholder {
@@ -271,13 +263,9 @@
   height: 40px;
 }
 
-.registration__form__right-part {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 
 .registration__button.button {
   width: 145px;
-  height: 40px;}
+  height: 40px;
+}
