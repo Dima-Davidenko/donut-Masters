@@ -49,14 +49,13 @@ window.addEventListener('resize', function () {
   } else {
   }
 });
-
 // -------------------------------------------------
 // Paralax on circles
 // -------------------------------------------------
+
 window.addEventListener('scroll', function () {
   const backgroundCanvas = document.querySelector('.background');
-  circlesOfset = Math.round(window.pageYOffset / 5);
-  backgroundCanvas.style.top = circlesOfset + 'px';
+  backgroundCanvas.style.top = Math.round(window.pageYOffset / 5) + 'px';
 });
 
 // -------------------------------------------------
