@@ -39,7 +39,7 @@
     </button>
     <div class="mob-menu container">
       <nav class="mob-menu__nav">
-        <a class="mob-menu__logo" href="#">
+        <a class="mob-menu__logo" href="#hero">
           <svg class="logo">
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
@@ -78,42 +78,3 @@
     </div>
   </div>
 </header>
-<script>
-  (() => {
-    const mobileMenu = document.querySelector('.mob-menu');
-    const menuBtnOpen = document.querySelector('.mob-menu__button-open');
-    const menuBtnClose = document.querySelector('.mob-menu__button-close');
-
-    const toggleMenu = () => {
-      mobileMenu.classList.toggle('is-mob-menu-open');
-    };
-
-    menuBtnOpen.addEventListener('click', toggleMenu);
-    menuBtnClose.addEventListener('click', toggleMenu);
-  })();
-  document.querySelectorAll('a[href^="#"').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const mobileMenu = document.querySelector('.mob-menu');
-      const toggleMenu = () => {
-        mobileMenu.classList.toggle('is-mob-menu-open');
-      };
-      if (mobileMenu.classList.contains('is-mob-menu-open')) {
-        mobileMenu.classList.toggle('is-mob-menu-open');
-      }
-      let href = this.getAttribute('href').substring(1);
-
-      const scrollTarget = document.getElementById(href);
-
-      // const topOffset = document.querySelector('.scrollto').offsetHeight;
-      const topOffset = 80; // если не нужен отступ сверху
-      const elementPosition = scrollTarget.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
-
-      window.scrollBy({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    });
-  });
-</script>
