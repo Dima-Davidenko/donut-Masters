@@ -1,34 +1,34 @@
-<header class="header">
+<header class="section header">
   <div class="container header__container">
     <nav class="header__nav">
-      <a class="header__logo" href="#">
+      <a class="header__logo" href="#hero">
         <svg class="logo">
           <use href="./images/icons.svg#icon-logo"></use>
         </svg>
       </a>
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">About us</a>
+          <a class="header__nav-link" href="#about-us">About us</a>
         </li>
 
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Program</a>
+          <a class="header__nav-link" href="#program">Program</a>
         </li>
 
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Speakers</a>
+          <a class="header__nav-link" href="#speakers">Speakers</a>
         </li>
 
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Price</a>
+          <a class="header__nav-link" href="#price">Price</a>
         </li>
 
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Reviews</a>
+          <a class="header__nav-link" href="#reviews">Reviews</a>
         </li>
 
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Contacts</a>
+          <a class="header__nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
@@ -46,27 +46,27 @@
         </a>
         <ul class="mob-menu__nav-list">
           <li class="mob-menu__nav-item">
-            <a class="mob-menu__nav-link" href="#">About us</a>
+            <a class="mob-menu__nav-link" href="#about-us">About us</a>
           </li>
 
           <li class="mob-menu__nav-item">
-            <a class="mob-menu__nav-link" href="#">Program</a>
+            <a class="mob-menu__nav-link" href="#program">Program</a>
           </li>
 
           <li class="mob-menu__nav-item">
-            <a class="mob-menu__nav-link" href="#">Speakers</a>
+            <a class="mob-menu__nav-link" href="#speakers">Speakers</a>
           </li>
 
           <li class="mob-menu__nav-item">
-            <a class="mob-menu__nav-link" href="#">Price</a>
+            <a class="mob-menu__nav-link" href="#price">Price</a>
           </li>
 
           <li class="mob-menu__nav-item">
-            <a class="mob-menu__nav-link" href="#">Reviews</a>
+            <a class="mob-menu__nav-link" href="#reviews">Reviews</a>
           </li>
 
           <li class="mob-menu__nav-item">
-            <a class="mob-menu__nav-link" href="#">Contacts</a>
+            <a class="mob-menu__nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -91,4 +91,29 @@
     menuBtnOpen.addEventListener('click', toggleMenu);
     menuBtnClose.addEventListener('click', toggleMenu);
   })();
+  document.querySelectorAll('a[href^="#"').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const mobileMenu = document.querySelector('.mob-menu');
+      const toggleMenu = () => {
+        mobileMenu.classList.toggle('is-mob-menu-open');
+      };
+      if (mobileMenu.classList.contains('is-mob-menu-open')) {
+        mobileMenu.classList.toggle('is-mob-menu-open');
+      }
+      let href = this.getAttribute('href').substring(1);
+
+      const scrollTarget = document.getElementById(href);
+
+      // const topOffset = document.querySelector('.scrollto').offsetHeight;
+      const topOffset = 80; // если не нужен отступ сверху
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    });
+  });
 </script>

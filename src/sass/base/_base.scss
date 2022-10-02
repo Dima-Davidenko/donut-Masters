@@ -1,9 +1,21 @@
+html {
+  background: linear-gradient(
+    180.11deg,
+    #e5e2e3 10.73%,
+    #fdfefe 38.02%,
+    #e5e2e3 71.11%,
+    #fdfefe 99.91%
+  );
+}
 body {
+  position: relative;
+  z-index: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: $brown-clr;
-  background-color: $bg-clr;
+  background-color: transparent;
+  // background-color: $bg-clr;
 }
 ul {
   padding: 0;
