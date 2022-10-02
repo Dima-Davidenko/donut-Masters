@@ -5,10 +5,9 @@ function circlePaint() {
   const backgroundCanvas = document.querySelector('.background');
   const bodyHeight = document.body.offsetHeight;
   const bodyWidth = document.body.offsetWidth;
-  backgroundCanvas.style.height = bodyHeight + 'px';
+  const canvasHeight = bodyHeight - Math.round(bodyHeight / 5);
+  backgroundCanvas.style.height = canvasHeight + 'px';
 
-  // div.innerHTML =
-  //   '<svg class="circle__icon"><use class="circle__icon" href="./images/icons.svg#icon-circle-ratio62"></use></svg>';
   for (let i = 0; i <= bodyHeight - 100; i += 40 + Math.round(Math.random() * 200)) {
     // Create new div
     let circleDiv = document.createElement('div');
@@ -50,6 +49,16 @@ window.addEventListener('resize', function () {
   } else {
   }
 });
+
+// -------------------------------------------------
+// Paralax on circles
+// -------------------------------------------------
+window.addEventListener('scroll', function () {
+  const backgroundCanvas = document.querySelector('.background');
+  circlesOfset = Math.round(window.pageYOffset / 5);
+  backgroundCanvas.style.top = circlesOfset + 'px';
+});
+
 // -------------------------------------------------
 // Mobile menu open, close
 // -------------------------------------------------
