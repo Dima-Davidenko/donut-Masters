@@ -54,36 +54,3 @@
     </div>
   </div>
 </section>
-<script>
-  (() => {
-    const stashText = document.querySelector('.stash-text');
-    const stashTextBtn = document.querySelector('.stash-text-btn');
-
-    const toggleMenu = () => {
-      stashText.classList.toggle('invisible');
-      stashTextBtn.classList.toggle('invisible');
-    };
-
-    stashTextBtn.addEventListener('click', toggleMenu);
-
-    if (document.documentElement.clientWidth >= 1280) {
-      if (stashText.classList.contains('invisible')) {
-        stashText.classList.toggle('invisible');
-      }
-    }
-
-    window.addEventListener('resize', function () {
-      if (document.documentElement.clientWidth >= 1280) {
-        if (stashText.classList.contains('invisible')) {
-          stashText.classList.toggle('invisible');
-        }
-      }
-      if (document.documentElement.clientWidth < 1280) {
-        if (!stashText.classList.contains('invisible')) {
-          stashText.classList.add('invisible');
-          stashTextBtn.classList.remove('invisible');
-        }
-      }
-    });
-  })();
-</script>
