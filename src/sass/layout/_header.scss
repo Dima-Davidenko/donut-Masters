@@ -1,8 +1,12 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 4;
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+  }
 }
 .header__container {
   position: relative;
@@ -12,6 +16,38 @@
   }
   @media screen and (min-width: 1280px) {
     padding-top: 36px;
+  }
+}
+.header__background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 66px;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.99;
+  background-color: #e5e2e3b1;
+  @media screen and (max-width: 479px) {
+    width: 100vw;
+  }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    height: 70px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.header__logo {
+  width: 108px;
+  @media screen and (min-width: 768px) {
+    width: 106px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 158px;
   }
 }
 .header__nav {
@@ -35,7 +71,7 @@
 .header__nav-link {
   padding: 4px 8px;
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: #fff;
     background: linear-gradient(rgba(248, 110, 103, 0.63) 0%, rgba(253, 86, 143, 0.86) 100%);
     box-shadow: 0 7px 27px -2px rgb(253 88 140 / 35%);

@@ -1,7 +1,12 @@
 .hero {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 3;
   height: 312px;
   margin-bottom: 10px;
   text-align: center;
+  transform: translateX(-50%);
   @media screen and (min-width: 768px) {
     height: 345px;
     margin-bottom: 18px;
