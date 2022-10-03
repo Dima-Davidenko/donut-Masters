@@ -34,28 +34,24 @@ function circlePaint() {
   }
 }
 circlePaint();
-// Remoove circles when resize
-let backgroundCanvas = document.querySelector('.background');
-window.addEventListener('resize', function () {
-  backgroundCanvas = document.querySelector('.background');
-  if (backgroundCanvas) {
-    document.body.removeChild(backgroundCanvas);
-    backgroundCanvas = document.createElement('div');
-    backgroundCanvas.className = 'background';
-    document.body.append(backgroundCanvas);
-    circlePaint();
-
-    // backgroundCanvas = document.querySelector('.background');
-  } else {
-  }
-});
 // -------------------------------------------------
 // Paralax on circles
 // -------------------------------------------------
-
+let oldOff = 0;
 window.addEventListener('scroll', function () {
   const backgroundCanvas = document.querySelector('.background');
-  backgroundCanvas.style.top = Math.round(window.pageYOffset / 5) + 'px';
+  const backgroundCurrentOffset = backgroundCanvas.offsetTop;
+
+  let pageOffset = window.pageYOffset;
+  let newOff = Math.round(pageOffset / 5);
+  if (newOff > oldOff) {
+    oldOff = newOff;
+    backgroundCanvas.style.top = backgroundCurrentOffset + 1 + 'px';
+  }
+  if (newOff < oldOff) {
+    oldOff = newOff;
+    backgroundCanvas.style.top = backgroundCurrentOffset - 1 + 'px';
+  }
 });
 
 // -------------------------------------------------
