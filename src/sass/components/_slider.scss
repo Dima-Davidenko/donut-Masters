@@ -1,0 +1,215 @@
+.slick-center {
+  // transition: padding-top 2000ms $animation;
+  transition: transform 2000ms $animation;
+  @media screen and (min-width: 768px) {
+    width: 200px;
+    transform: translateY(120px);
+    padding-bottom: 103px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 394px;
+  }
+}
+.slick-center .reviews-slide__img {
+  transition: transform 2000ms $animation;
+  @media screen and (min-width: 768px) {
+    transform: scale(1.7);
+    max-width: inherit;
+  }
+  @media screen and (min-width: 1280px) {
+    transform: scale(1.4);
+  }
+}
+
+.slick-center .reviews-slide__review {
+  transition: opacity 2000ms $animation 500ms;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    width: 668px;
+    height: 120px;
+    right: 240px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: inline-block;
+    width: 1000px;
+    right: 305px;
+  }
+}
+
+.slick-track.slick-center {
+  @media screen and (min-width: 768px) {
+    width: 300px;
+  }
+  @media screen and (min-width: 1280px) {
+  }
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-active {
+  transition: transform 2000ms $animation;
+}
+
+.reviews-slide {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-slide .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
+  border: none;
+}
+
+.reviews-slide .slick-arrow.slick-prev {
+  left: 0;
+  // background: url('../images/reviews-img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+}
+
+.reviews-slide .slick-arrow.slick-next {
+  right: 0;
+  // background: url('../images/reviews-img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+}
+
+.reviews-slide__element {
+  transition: transform 2000ms $animation;
+
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.reviews-slide {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    height: 475px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 750px;
+  }
+}
+.reviews-slide__img {
+  border-radius: 50%;
+  background-size: contain;
+  width: 280px;
+  height: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 2000ms $animation;
+  transform: scale(1);
+  @media screen and (min-width: 768px) {
+    width: 151px;
+    height: 151px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 285px;
+    height: 285px;
+  }
+}
+.reviews-slide__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+
+  text-align: center;
+  position: relative;
+
+  color: #000000;
+  margin-top: 40px;
+  margin-bottom: 8px;
+  &::before {
+    content: '';
+    position: absolute;
+    // background-image: url('../images/reviews-img/stars5.svg');
+    //   background-size: contain;
+    background-repeat: no-repeat;
+    width: 136px;
+    height: 24px;
+    top: -115%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1280px) {
+    line-height: 1.25;
+    color: #3c322d;
+  }
+}
+.reviews-slide__review {
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+
+  color: #3c322d;
+  position: relative;
+  @media screen and (min-width: 768px) {
+    opacity: 0;
+    line-height: 1.25;
+
+    color: #000000;
+  }
+  @media screen and (min-width: 1280px) {
+    opacity: 0;
+    font-size: 18px;
+    line-height: 1.22;
+
+    color: #3c322d;
+  }
+}
+.slide-number {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.2;
+
+  text-align: center;
+
+  color: #000000;
+  margin-top: 32px;
+  @media screen and (min-width: 768px) {
+    margin-top: 22px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 28px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: $pink-clr;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-160%, 25%);
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: $pink-clr;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(75%, -10%);
+  }
+}

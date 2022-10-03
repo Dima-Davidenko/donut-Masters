@@ -112,9 +112,6 @@ const toggleHiddenText = () => {
   stashTextBtn.classList.toggle('invisible');
   lessStashTextBtn.classList.toggle('invisible');
 };
-// const readMoreToReadLessToggle = () => {
-
-// };
 const toggleProgramText = () => {
   readMoreTxt.classList.toggle('invisible');
   readMoreTxtBtn.classList.toggle('invisible');
@@ -167,4 +164,44 @@ window.addEventListener('resize', function () {
       lessRreadMoreTxtBtn.classList.add('invisible');
     }
   }
+});
+
+// -------------------------------------------------
+// Reviews slider
+// -------------------------------------------------
+$(document).ready(function () {
+  $('.reviews-slide').slick({
+    arrows: true,
+    slidesToShow: 3,
+    autoplay: false,
+    centerMode: true,
+    speed: 2000,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 1279,
+        settings: {
+          centerMode: true,
+          centerPadding: '10px',
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '10px',
+          centerMode: true,
+          speed: 500,
+        },
+      },
+    ],
+  });
+});
+// Change slide number
+var $status = $('.slide-number');
+var $slickElement = $('.reviews-slide');
+$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+  var i = (currentSlide ? currentSlide : 0) + 1;
+  $status.text(i + '/' + slick.slideCount);
 });
