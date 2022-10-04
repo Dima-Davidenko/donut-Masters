@@ -423,10 +423,10 @@
   @media screen and (min-width: 1280px) {
     transform: translateY(10px);
   }
-  &[rate='5'] {
+  &[review-rate='5'] {
     background-image: url('../images/reviews/five-stars-review.svg');
   }
-  &[rate='4'] {
+  &[review-rate='4'] {
     background-image: url('../images/reviews/four-stars-review.svg');
   }
 }
