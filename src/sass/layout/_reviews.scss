@@ -3,8 +3,12 @@
   padding-bottom: 20px;
 }
 .reviews__container {
+  max-width: 900px;
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
 }
 .reviews__title {
   font-family: 'Montserrat Alternates';
@@ -20,6 +24,7 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 1.22;
+    margin-bottom: 150px;
   }
 
   &::before {

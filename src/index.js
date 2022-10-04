@@ -175,6 +175,7 @@ $(document).ready(function () {
     slidesToShow: 3,
     autoplay: false,
     centerMode: true,
+    centerPadding: '0px',
     speed: 2000,
     draggable: false,
     responsive: [
@@ -182,7 +183,7 @@ $(document).ready(function () {
         breakpoint: 1279,
         settings: {
           centerMode: true,
-          centerPadding: '10px',
+          centerPadding: '0px',
           slidesToShow: 3,
         },
       },
@@ -190,7 +191,7 @@ $(document).ready(function () {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
-          centerPadding: '10px',
+          centerPadding: '0px',
           centerMode: true,
           speed: 500,
         },
