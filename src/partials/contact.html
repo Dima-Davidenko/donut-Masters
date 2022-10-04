@@ -4,18 +4,17 @@
       <h3 class="contact__title">Contact</h3>
       <p class="contact__text">We will answer any question!</p>
       <label class="contact__label">
-        <input type="email" class="contact__input" name="contact-mail" placeholder="Email" />
+        <input type="email" class="contact__input" name="contact-mail" placeholder=" " />
+        <span class="contact__span">Email</span>
       </label>
       <label class="contact__label">
-        <input
-          type="comment"
-          class="contact__textarea"
-          name="contact-comment"
-          placeholder="Type your question"
-        />
+        <input type="comment" class="contact__textarea" name="contact-comment" placeholder=" " minlength="10"
+          title="Please ask your question." />
+        <span class="contact__span-down">Type your question</span>
       </label>
-      <button type="submit" class="button contact__button">Send</button>
+      <button type="submit" class="button">Send</button>
     </form>
+   
     <ul class="soc-list contact__soc-list">
       <li class="contact__pack">
         <a href="#" class="soc-list__link">
