@@ -206,3 +206,54 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
   var i = (currentSlide ? currentSlide : 0) + 1;
   $status.text(i + '/' + slick.slideCount);
 });
+
+// Animation
+const speakersTitle = document.querySelector('.speakers-title');
+const speakerFirst = document.querySelector('.speaker-first');
+const speakerSecond = document.querySelector('.speaker-second');
+const speakerThird = document.querySelector('.speaker-third');
+const speakerFourth = document.querySelector('.speaker-fourth');
+const scrollToSpeakers = speakersTitle.offsetTop;
+
+const programTitle = document.querySelector('.program-title');
+const programFirst = document.querySelector('.program-first');
+const programSecond = document.querySelector('.program-second');
+const programThird = document.querySelector('.program-third');
+const programFourth = document.querySelector('.program-fourth');
+const scrollTopPrograms = programTitle.offsetTop;
+const viewPortHeight = window.screen.height;
+let isSpeakersShown = false;
+let isProgramShown = false;
+window.addEventListener('scroll', function () {
+  if (!isSpeakersShown) {
+    if (window.pageYOffset > scrollToSpeakers - viewPortHeight) {
+      speakerFirst.className =
+        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-2s';
+      speakerSecond.className =
+        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-3s';
+      speakerThird.className =
+        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-4s';
+      speakerFourth.className =
+        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-5s';
+      speakersTitle.className =
+        'speakers-title section__title speakers__title animate__animated animate__fadeInUp animate__slower animate__delay-1s';
+      isSpeakersShown = true;
+    }
+  }
+
+  if (!isProgramShown) {
+    if (window.pageYOffset > scrollTopPrograms - viewPortHeight) {
+      programFirst.className =
+        'program__thumb program__thumb-top animate__animated animate__bounceIn animate__delay-1s';
+      programSecond.className =
+        'program__thumb program__thumb-bottom animate__animated animate__bounceIn animate__delay-3s';
+      programThird.className =
+        'program__thumb program__thumb-top animate__animated animate__bounceIn animate__delay-2s';
+      programFourth.className =
+        'program-fourth transparent program__thumb program__thumb-bottom animate__animated animate__bounceIn animate__delay-4s';
+      programTitle.className =
+        'program-title program__title animate__animated animate__bounceIn animate__delay-1s';
+      isProgramShown = true;
+    }
+  }
+});
