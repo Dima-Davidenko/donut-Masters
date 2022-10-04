@@ -1,194 +1,120 @@
-<section class="reviews container" id="reviews">
-  <h2 class="section__title reviews__tittle--position">Reviews</h2>
-  <ul class="reviews__list">
-    <li class="reviews__sample">
-      <picture>
-        <source
-          srcset="
-            ./images/reviews/desktop/will-min.png    1x,
-            ./images/reviews/desktop/will@2x-min.png 2x
-          "
-          media="(min-width:1280px)"
-        />
-        <source
-          srcset="
-            ./images/reviews/tablet/will-min.png    1x,
-            ./images/reviews/tablet/will@2x-min.png 2x
-          "
-          media="(min-width:768px)"
-        />
-        <source
-          srcset="
-            ./images/reviews/mobile/will-min.png    1x,
-            ./images/reviews/mobile/will@2x-min.png 2x
-          "
-          media="(max-width:767px)"
-        />
-        <img
-          class="reviews__image reviews__eletmtnts--position"
-          src="./images/reviews/mobile/will-min.png"
-          alt="will"
-        />
-      </picture>
+<section class="reviews" id="reviews">
+  <div class="container reviews__container">
+    <h2 class="reviews__title">Reviews</h2>
+    <div class="reviews-slide">
+      <div class="reviews-slide__element">
+        <picture>
+          <source
+            srcset="./images/reviews/john.jpg 1x, ./images/reviews/john.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="./images/reviews/john.jpg 1x, ./images/reviews/john.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="./images/reviews/john.jpg 1x, ./images/reviews/john.jpg 2x"
+            media="(max-width:767px)"
+          />
 
-      <div class="reviews__score">
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
+          <img class="reviews-slide__img" src="./images/reviews/john.jpg" alt="john" width="280" />
+        </picture>
+        <div class="reviews-slide__rate" rate="4"></div>
+        <p class="reviews-slide__name">John</p>
+        <p class="reviews-slide__review">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ad nostrum pariatur sequi
+          tempora illum incidunt doloribus impedit exercitationem expedita soluta laudantium
+          veritatis, perferendis ipsa, molestiae illo saepe qui sunt earum explicabo, facilis facere
+          culpa quibusdam dignissimos. Provident neque hic suscipit perferendis? Sint modi quod
+          possimus illum sequi porro architecto.
+        </p>
       </div>
+      <div class="reviews-slide__element">
+        <picture>
+          <source
+            srcset="./images/reviews/will.jpg 1x, ./images/reviews/will.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="./images/reviews/will.jpg 1x, ./images/reviews/will.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="./images/reviews/will.jpg 1x, ./images/reviews/will.jpg 2x"
+            media="(max-width:767px)"
+          />
 
-      <h3 class="reviews__name reviews__name--position">Will</h3>
-
-      <p class="reviews__description reviews__description--position">
-        Last time I have visited a cooking course by Eva I was impressed with the way she explained
-        everything to people. You can be sure you will manage to cook a delicious dish even if it is
-        your first time in the kitchen! Thank you so much for the masterclass! Looking forward to
-        the next one and highly recommend it to everyone!
-      </p>
-
-      <span class="reviews__order">
-        <svg class="order__icon" width="35" height="2">
-          <use href="./images/icons.svg#icon-horiz-bar"></use>
-        </svg>
-        2/15
-        <svg class="order__icon" width="35" height="2">
-          <use href="./images/icons.svg#icon-horiz-bar"></use>
-        </svg>
-      </span>
-    </li>
-
-    <li class="reviews__sample reviews__sample--display reviews--left">
-      <picture>
-        <source
-          srcset="
-            ./images/reviews/desktop/njohn-min.png    1x,
-            ./images/reviews/desktop/njohn@2x-min.png 2x
-          "
-          media="(min-width:1280px)"
-        />
-        <source
-          srcset="
-            ./images/reviews/tablet/john-min.png    1x,
-            ./images/reviews/tablet/john@2x-min.png 2x
-          "
-          media="(min-width:768px)"
-        />
-        <img
-          class="reviews__picture reviews__eletmtnts--position"
-          src="./images/reviews/tablet/john-min.png"
-          alt="john"
-        />
-      </picture>
-      <div class="reviews__score">
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-stroke"></use>
-        </svg>
+          <img class="reviews-slide__img" src="./images/reviews/will.jpg" alt="will" width="280" />
+        </picture>
+        <div class="reviews-slide__rate" rate="5"></div>
+        <p class="reviews-slide__name">Will</p>
+        <p class="reviews-slide__review">
+          Last time I have visited a cooking course by Eva I was impressed with the way she
+          explained everything to people. You can be sure you will manage to cook a delicious dish
+          even if it is your first time in the kitchen! <br />
+          Thank you so much for the masterclass! Looking forward to the next one and highly
+          recommend it to everyone!
+        </p>
       </div>
-      <h3 class="reviews__name reviews__eletmtnts--position">John</h3>
-      <p class="reviews__description reviews__description--position reviews__description--display">
-        Last time I have visited a cooking course by Eva I was impressed with the way she explained
-        everything to people. You can be sure you will manage to cook a delicious dish even if it is
-        your first time in the kitchen! Thank you so much for the masterclass! Looking forward to
-        the next one and highly recommend it to everyone!
-      </p>
-      <span class="reviews__description--display">
-        <div class="order__icon">
-          <svg width="35" height="1">
-            <use href="./images/icons.svg#icon-horiz-bar"></use>
-          </svg>
-        </div>
-        2/15
-        <div class="order__icon">
-          <svg width="35" height="1">
-            <use href="./images/icons.svg#icon-horiz-bar"></use>
-          </svg></div
-      ></span>
-    </li>
+      <div class="reviews-slide__element">
+        <picture>
+          <source
+            srcset="./images/reviews/elizbeth.jpg 1x, ./images/reviews/elizbeth.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="./images/reviews/elizbeth.jpg 1x, ./images/reviews/elizbeth.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="./images/reviews/elizbeth.jpg 1x, ./images/reviews/elizbeth.jpg 2x"
+            media="(max-width:767px)"
+          />
 
-    <li class="reviews__sample reviews__sample--display reviews--right">
-      <picture class="reviews__picture">
-        <source
-          srcset="
-            ./images/reviews/desktop/elisabeth-min.png    288w,
-            ./images/reviews/desktop/elisabeth@2x-min.png 576w
-          "
-          media="(min-width:1280px)"
-          sizes="288px"
-        />
-        <source
-          srcset="
-            ./images/reviews/tablet/elisabeth-min.png    152w,
-            ./images/reviews/tablet/elisabeth@2x-min.png 304w
-          "
-          media="(min-width:768px)"
-          sizes="152px"
-        />
-        <img
-          class="reviews__picture reviews__eletmtnts--position"
-          src="./images/reviews/tablet/elisabeth-min.png"
-          alt="elisabeth"
-        />
-      </picture>
-      <div class="reviews__score">
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
-        <svg width="24" height="24">
-          <use href="./images/icons.svg#icon-star-filled"></use>
-        </svg>
+          <img
+            class="reviews-slide__img"
+            src="./images/reviews/elizbeth.jpg"
+            alt="elizbeth"
+            width="280"
+          />
+        </picture>
+        <div class="reviews-slide__rate" rate="4"></div>
+        <p class="reviews-slide__name">Elizabeth</p>
+        <p class="reviews-slide__review">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sit, officiis
+          perferendis ipsam aperiam atque consequuntur assumenda quod dolorum iusto reprehenderit
+          explicabo magnam adipisci ea quisquam eveniet nihil soluta error!
+        </p>
       </div>
-      <h3 class="reviews__name reviews__eletmtnts--position">Elisabeth</h3>
-      <p class="reviews__description reviews__description--position reviews__description--display">
-        Last time I have visited a cooking course by Eva I was impressed with the way she explained
-        everything to people. You can be sure you will manage to cook a delicious dish even if it is
-        your first time in the kitchen! Thank you so much for the masterclass! Looking forward to
-        the next one and highly recommend it to everyone!
-      </p>
-      <span class="reviews__description--display">
-        <div class="order__icon">
-          <svg width="35" height="1">
-            <use href="./images/icons.svg#icon-horiz-bar"></use>
-          </svg>
-        </div>
-        2/15
-        <div class="order__icon">
-          <svg width="35" height="1">
-            <use href="./images/icons.svg#icon-horiz-bar"></use>
-          </svg></div
-      ></span>
-    </li>
-  </ul>
+      <div class="reviews-slide__element">
+        <picture>
+          <!-- <source
+            srcset="./images/reviews/eva.jpg 1x, ./images/reviews/eva.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="./images/reviews/eva.jpg 1x, ./images/reviews/eva.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="./images/reviews/eva.jpg 1x, ./images/reviews/eva.jpg 2x"
+            media="(max-width:767px)"
+          /> -->
+
+          <img
+            class="reviews-slide__img"
+            src="./images/reviews/isabella.png"
+            alt="eva"
+            width="280"
+          />
+        </picture>
+        <div class="reviews-slide__rate" rate="5"></div>
+        <p class="reviews-slide__name">Isabella</p>
+        <p class="reviews-slide__review">
+          I work here and can say that it's the best place to learn cooking donuts!!!
+        </p>
+      </div>
+    </div>
+    <span class="slide-number"></span>
+  </div>
 </section>

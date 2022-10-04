@@ -36,7 +36,8 @@
         become a real professional in donuts cooking!
       </p>
 
-      <button class="program__read-more-btn js-btn-read-more-open">Read more</button>
+      <button class="read-more-btn js-btn-read-more-open">Read more</button>
+      <button class="read-more-btn js-btn-read-more-close invisible">Less</button>
     </div>
 
     <div class="program__canvas">
@@ -166,36 +167,3 @@
     </div>
   </div>
 </section>
-<script>
-  (() => {
-    const readMoreTxt = document.querySelector('.js-read-more-txt');
-    const readMoreTxtBtn = document.querySelector('.js-btn-read-more-open');
-
-    const toggleMenu = () => {
-      readMoreTxt.classList.toggle('invisible');
-      readMoreTxtBtn.classList.toggle('invisible');
-    };
-
-    readMoreTxtBtn.addEventListener('click', toggleMenu);
-
-    if (document.documentElement.clientWidth >= 1280) {
-      if (readMoreTxt.classList.contains('invisible')) {
-        readMoreTxt.classList.toggle('invisible');
-      }
-    }
-
-    window.addEventListener('resize', function () {
-      if (document.documentElement.clientWidth >= 1280) {
-        if (readMoreTxt.classList.contains('invisible')) {
-          readMoreTxt.classList.toggle('invisible');
-        }
-      }
-      if (document.documentElement.clientWidth < 1280) {
-        if (!readMoreTxt.classList.contains('invisible')) {
-          readMoreTxt.classList.add('invisible');
-          readMoreTxtBtn.classList.remove('invisible');
-        }
-      }
-    });
-  })();
-</script>

@@ -52,15 +52,12 @@
   font-size: 16px;
   line-height: 1.25;
   color: $brown-clr;
+  margin-bottom: 20px;
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 30px;
     font-size: 18px;
     line-height: 1.22;
-  }
-
-  &:not(:last-of-type) {
-    margin-bottom: 20px;
   }
 
   &:last-child {
@@ -86,20 +83,5 @@
   @media screen and (min-width: 1280px) {
     width: 608px;
     height: 381px;
-  }
-}
-.about-us__btn {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
-    line-height: 22px;
-  }
-  @media screen and (min-width: 1280px) {
-    display: none;
   }
 }
