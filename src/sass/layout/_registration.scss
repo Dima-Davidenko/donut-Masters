@@ -212,8 +212,7 @@
   }
 }
 
-.registration__form__input:focus + .registration__form-label,
-.registration__form__input:not(:placeholder-shown) + .registration__form-label {
+.registration__form__input:focus + .registration__form-label {
   transform: translateY(-34px);
   color: palevioletred;
   font-weight: 14px;
