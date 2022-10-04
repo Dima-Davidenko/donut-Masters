@@ -10,7 +10,7 @@
 
   @media screen and (min-width: 1280px) {
     width: 100%;
-    max-height: 313px;
+    // max-height: 313px;
   }
 }
 
@@ -174,11 +174,14 @@
 .registration__form-field {
   position: relative;
   height: auto;
-  margin-bottom: 20px;
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
   &:focus {
     outline: none;
     border-bottom: 1px solid $pink-clr;
   }
+
 }
 
 .registration__form__input {
@@ -212,7 +215,8 @@
   }
 }
 
-.registration__form__input:focus + .registration__form-label {
+.registration__form__input:focus + .registration__form-label,
+.registration__form__input:not(:placeholder-shown) + .registration__form-label {
   transform: translateY(-34px);
   color: palevioletred;
   font-weight: 14px;
@@ -225,6 +229,25 @@
     transform: translateY(-23px);
   }
 }
+
+
+::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.registration__form__input:focus::-webkit-input-placeholder {
+  opacity: 1;
+  font-size: 12px;
+  color: #937c7c;
+}
+
+
+
+
+
+
+
+
 
 .registration__form-label {
   position: absolute;
@@ -295,4 +318,13 @@
   @media screen and (min-width: 1280px) {
     margin-right: 28px;
   }
+}
+
+.registration__button{
+  margin-top: 20px;
+  @media screen and(min-width:768px) {
+    margin-top: 0;
+  }
+
+
 }
