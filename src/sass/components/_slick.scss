@@ -367,12 +367,12 @@
 
 .reviews-slide .slick-arrow.slick-prev {
   left: 0;
-  // background: url('../images/reviews-img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+  // background: url('../images/reviews/sl-arrow_l.svg') 0 0 / 100% no-repeat;
 }
 
 .reviews-slide .slick-arrow.slick-next {
   right: 0;
-  // background: url('../images/reviews-img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+  // background: url('../images/reviews/sl-arrow_r.svg') 0 0 / 100% no-repeat;
 }
 
 .reviews-slide__element {
@@ -424,7 +424,10 @@
     transform: translateY(10px);
   }
   &[rate='5'] {
-    background-image: url('../images/reviews-img/five-stars-review.svg');
+    background-image: url('../images/reviews/five-stars-review.svg');
+  }
+  &[rate='4'] {
+    background-image: url('../images/reviews/four-stars-review.svg');
   }
 }
 .reviews-slide__name {
