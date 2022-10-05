@@ -5,7 +5,7 @@ function circlePaint() {
   const backgroundCanvas = document.querySelector('.background');
   const bodyHeight = document.body.offsetHeight;
   const bodyWidth = document.body.offsetWidth;
-  const canvasHeight = bodyHeight - Math.round(bodyHeight / 5);
+  const canvasHeight = bodyHeight;
   backgroundCanvas.style.height = canvasHeight + 'px';
 
   for (let i = 0; i <= bodyHeight - 100; i += 40 + Math.round(Math.random() * 200)) {
@@ -32,27 +32,87 @@ function circlePaint() {
       circleDiv.style.width = radius + diffWidth + 'px';
     }
   }
+  // const emptyDiv = document.createElement('div');
+  // backgroundCanvas.append(emptyDiv);
+  // emptyDiv.className = 'empty-bg';
+  // emptyDiv.style.height = 500 + 'px';
+
+  const bg1Div = document.createElement('div');
+  backgroundCanvas.append(bg1Div);
+  bg1Div.className = 'donat-bg-1';
+  bg1Div.style.height = Math.round(bodyHeight / 3) + 'px';
+
+  const bg2Div = document.createElement('div');
+  backgroundCanvas.append(bg2Div);
+  bg2Div.className = 'donat-bg-2';
+  bg2Div.style.height = Math.round(bodyHeight / 3) + 'px';
+
+  const bg3Div = document.createElement('div');
+  backgroundCanvas.append(bg3Div);
+  bg3Div.className = 'donat-bg-3';
+  bg3Div.style.height = Math.round(bodyHeight / 3) + 'px';
+
+  window.addEventListener('scroll', function () {
+    // const viewPortHeight = window.screen.innerHeight;
+    const viewPortHeight = document.documentElement.scrollHeight;
+    const viewPortWidth = window.screen.width;
+    // console.log(viewPortHeight);
+    if (1) {
+      const yPosition = Math.round(viewPortHeight / 2);
+      if (window.pageYOffset < Math.round(bodyHeight / 3)) {
+        bg1Div.style.cssText =
+          'height: ' +
+          Math.round(bodyHeight / 3) +
+          'px; background-position: 50% ' +
+          (window.pageYOffset + 255) +
+          'px;';
+      }
+      if (window.pageYOffset > Math.round(bodyHeight / 3) * 2 - viewPortHeight * 2 - 255) {
+        bg2Div.style.cssText =
+          'height: ' +
+          Math.round(bodyHeight / 3) +
+          'px; background-position: 50% ' +
+          (window.pageYOffset - (Math.round(bodyHeight / 3) - 275)) +
+          'px;';
+      }
+      if (window.pageYOffset > Math.round(bodyHeight / 3) * 3 - viewPortHeight * 2 - 255) {
+        console.log(window.pageYOffset);
+        console.log(Math.round(bodyHeight / 3) * 2 - viewPortHeight - 200);
+        bg3Div.style.cssText =
+          'height: ' +
+          (Math.round(bodyHeight / 3) + 1000) +
+          'px; background-position: 50% ' +
+          (window.pageYOffset - (Math.round(bodyHeight / 3) * 2 - 275)) +
+          'px;';
+      }
+    }
+
+    // console.log(window.pageYOffset);
+    // console.log(bodyHeight / 3);
+
+    // console.log(Math.round(bodyHeight / 3) * 2);
+  });
 }
 circlePaint();
 // -------------------------------------------------
 // Paralax on circles
 // -------------------------------------------------
-let oldOff = 0;
-window.addEventListener('scroll', function () {
-  const backgroundCanvas = document.querySelector('.background');
-  const backgroundCurrentOffset = backgroundCanvas.offsetTop;
+// let oldOff = 0;
+// window.addEventListener('scroll', function () {
+//   const backgroundCanvas = document.querySelector('.background');
+//   const backgroundCurrentOffset = backgroundCanvas.offsetTop;
 
-  let pageOffset = window.pageYOffset;
-  let newOff = Math.round(pageOffset / 5);
-  if (newOff > oldOff) {
-    oldOff = newOff;
-    backgroundCanvas.style.top = backgroundCurrentOffset + 1 + 'px';
-  }
-  if (newOff < oldOff) {
-    oldOff = newOff;
-    backgroundCanvas.style.top = backgroundCurrentOffset - 1 + 'px';
-  }
-});
+//   let pageOffset = window.pageYOffset;
+//   let newOff = Math.round(pageOffset / 5);
+//   if (newOff > oldOff) {
+//     oldOff = newOff;
+//     backgroundCanvas.style.top = backgroundCurrentOffset + 1 + 'px';
+//   }
+//   if (newOff < oldOff) {
+//     oldOff = newOff;
+//     backgroundCanvas.style.top = backgroundCurrentOffset - 1 + 'px';
+//   }
+// });
 
 // -------------------------------------------------
 // Mobile menu open, close
@@ -173,13 +233,12 @@ $(document).ready(function () {
   $('.reviews-slide').slick({
     arrows: true,
     slidesToShow: 3,
-    // autoplay: true,
+    autoplay: true,
     centerMode: true,
     centerPadding: '0px',
-    speed: 2000,
+    speed: 1000,
     waitForAnimate: false,
     focusOnSelect: true,
-    draggable: true,
     responsive: [
       {
         breakpoint: 1279,
