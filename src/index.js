@@ -173,11 +173,13 @@ $(document).ready(function () {
   $('.reviews-slide').slick({
     arrows: true,
     slidesToShow: 3,
-    autoplay: false,
+    // autoplay: true,
     centerMode: true,
     centerPadding: '0px',
     speed: 2000,
-    draggable: false,
+    waitForAnimate: false,
+    focusOnSelect: true,
+    draggable: true,
     responsive: [
       {
         breakpoint: 1279,
@@ -226,7 +228,7 @@ let isSpeakersShown = false;
 let isProgramShown = false;
 window.addEventListener('scroll', function () {
   if (!isSpeakersShown) {
-    if (window.pageYOffset > scrollToSpeakers - viewPortHeight) {
+    if (window.pageYOffset > scrollToSpeakers - viewPortHeight + 300) {
       speakerFirst.className =
         'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-2s';
       speakerSecond.className =
@@ -257,3 +259,29 @@ window.addEventListener('scroll', function () {
     }
   }
 });
+
+// const logoHover = siteLogo => {
+//   console.log('hover');
+//   siteLogo.href = './images/icons.svg#icon-logo-hover';
+// };
+// const logo = siteLogo => {
+//   console.log('out-hover');
+
+//   siteLogo.href = './images/icons.svg#icon-logo';
+// };
+
+// var logos = document.getElementsByClassName('logo');
+// for (var i = 0, len = logos.length; i < len; i++) {
+//   console.log('for');
+
+//   logos[i].addEventListener('mouseover', logoHover(logos[i]));
+//   logos[i].addEventListener('mouseout', logo(logos[i]));
+// }
+const upButton = document.querySelector('.up-button');
+window.onscroll = function () {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    upButton.classList.add('up-button--visible');
+  } else {
+    upButton.classList.remove('up-button--visible');
+  }
+};
