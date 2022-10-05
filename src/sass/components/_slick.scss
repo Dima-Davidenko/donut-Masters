@@ -385,11 +385,15 @@
 
 .reviews-slide .slick-arrow.slick-prev {
   left: 0;
+  transform: translateX(50px);
+
   // background: url('../images/reviews/sl-arrow_l.svg') 0 0 / 100% no-repeat;
 }
 
 .reviews-slide .slick-arrow.slick-next {
   right: 0;
+  transform: translateX(-50px);
+
   // background: url('../images/reviews/sl-arrow_r.svg') 0 0 / 100% no-repeat;
 }
 
