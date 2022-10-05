@@ -24,7 +24,7 @@
   line-height: 1.2;
   text-align: center;
   color: $brown-clr;
-  text-shadow: 6px 6px 18px rgba(254, 127, 223, 0.5), -6px -6px 18px rgba(254, 127, 223, 0.5);
+  text-shadow: 6px 6px 18px #f3848c, -6px -6px 18px #f3848c;
 
   position: absolute;
   top: 50%;
@@ -46,7 +46,7 @@
 }
 .slick-prev:hover,
 .slick-next:hover {
-  color: #d13156;
+  color: #f3848c;
 }
 .slick-prev:hover:before,
 .slick-next:hover:before {
