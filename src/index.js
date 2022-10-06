@@ -1,6 +1,4 @@
-// -------------------------------------------------
-// Make background circles
-// -------------------------------------------------
+// Remove old background div and creates the new one
 function reCreateBackground() {
   const bodyHeight = document.body.offsetHeight;
   const canvasContainer = document.querySelector('.js-canvas-container');
@@ -11,15 +9,15 @@ function reCreateBackground() {
   backgroundCanvas = document.createElement('div');
   canvasContainer.append(backgroundCanvas);
   backgroundCanvas.className = 'background';
-  backgroundCanvas.style.height = bodyHeight + 'px';
+  backgroundCanvas.style.height = bodyHeight - 200 + 'px';
 }
-
+// Make background circles
 function circlePaint() {
   const backgroundCanvas = document.querySelector('.background');
   const bodyHeight = document.body.offsetHeight;
   const bodyWidth = document.body.offsetWidth;
 
-  for (let i = 0; i <= bodyHeight - 100; i += 40 + Math.round(Math.random() * 200)) {
+  for (let i = 0; i <= bodyHeight - 200; i += 40 + Math.round(Math.random() * 200)) {
     // Create new div
     let circleDiv = document.createElement('div');
     circleDiv.className = 'circle circle--' + Math.round(Math.random() * (3 - 1) + 1);
@@ -46,6 +44,7 @@ function circlePaint() {
 
   // Create donut paralax bg
 }
+// Move background images to create parallax effect
 function parallaxBackground() {
   const bodyHeight = document.body.offsetHeight;
   const backgroundCanvas = document.querySelector('.background');
@@ -71,20 +70,20 @@ function parallaxBackground() {
       bgDivsPostion[i] = 0 - bgDivHeight * i + window.pageYOffset + viewPortHeight / 2 - 180;
     }
 
-    if (window.pageYOffset < bgDivHeight - 300) {
+    if (window.pageYOffset < bgDivHeight) {
       bgDivs[0].style.cssText =
         'height: ' + bgDivHeight + 'px; background-position: 50% ' + bgDivsPostion[0] + 'px;';
     }
     if (
       window.pageYOffset > bgDivHeight - viewPortHeight / 2 - 300 &&
-      window.pageYOffset < 2 * bgDivHeight - 200
+      window.pageYOffset < 2 * bgDivHeight
     ) {
       bgDivs[1].style.cssText =
         'height: ' + bgDivHeight + 'px; background-position: 50% ' + bgDivsPostion[1] + 'px;';
     }
     if (
       window.pageYOffset > 2 * bgDivHeight - viewPortHeight / 2 - 300 &&
-      window.pageYOffset < 3 * bgDivHeight - 300
+      window.pageYOffset < 3 * bgDivHeight
     ) {
       bgDivs[2].style.cssText =
         'height: ' +
@@ -95,18 +94,22 @@ function parallaxBackground() {
     }
   });
 }
-
+// Listen to 'resize' and check if current range has changed
+// If it's changed - calls for reCreateBackground, circlePaint, parallaxBackground,
+// showHiddenText or hideHiddenText
 function checkChangeRange() {
   const bodyWidth = document.body.offsetWidth;
   let oldRange = 0;
   if (bodyWidth >= 1280) {
     oldRange = 3;
+    showHiddenText();
   } else if (bodyWidth < 1280 && bodyWidth >= 768) {
     oldRange = 2;
+    hideHiddenText();
   } else {
     oldRange = 1;
+    hideHiddenText();
   }
-  console.log(oldRange);
 
   let newRange = oldRange;
   window.addEventListener('resize', function () {
@@ -125,33 +128,27 @@ function checkChangeRange() {
       this.setTimeout(circlePaint, 510);
       this.setTimeout(parallaxBackground, 520);
       newRange = oldRange;
-      console.log('rePaint');
-      console.log(newRange);
+      if (newRange === 3) {
+        showHiddenText();
+      } else {
+        hideHiddenText();
+      }
     }
   });
 }
-reCreateBackground();
-circlePaint();
-parallaxBackground();
-checkChangeRange();
+// Show or hide mobile menu
+function mobileMenu() {
+  const mobileMenu = document.querySelector('.mob-menu');
+  const menuBtnOpen = document.querySelector('.mob-menu__button-open');
+  const menuBtnClose = document.querySelector('.mob-menu__button-close');
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('is-mob-menu-open');
+  };
+  menuBtnOpen.addEventListener('click', toggleMenu);
+  menuBtnClose.addEventListener('click', toggleMenu);
+}
 
-// -------------------------------------------------
-// Mobile menu open, close
-// -------------------------------------------------
-const mobileMenu = document.querySelector('.mob-menu');
-const menuBtnOpen = document.querySelector('.mob-menu__button-open');
-const menuBtnClose = document.querySelector('.mob-menu__button-close');
-
-const toggleMenu = () => {
-  mobileMenu.classList.toggle('is-mob-menu-open');
-};
-
-menuBtnOpen.addEventListener('click', toggleMenu);
-menuBtnClose.addEventListener('click', toggleMenu);
-
-// -------------------------------------------------
-// Header menu + mobile menu smooth scroll and close mobile menu
-// -------------------------------------------------
+// Smooth smooth scroll on all #links and close mobile menu on mobile menu link click
 document.querySelectorAll('a[href^="#"').forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
@@ -166,8 +163,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 
     const scrollTarget = document.getElementById(href);
 
-    // const topOffset = document.querySelector('.scrollto').offsetHeight;
-    const topOffset = 80; // если не нужен отступ сверху
+    const topOffset = 80;
     const elementPosition = scrollTarget.getBoundingClientRect().top;
     const offsetPosition = elementPosition - topOffset;
 
@@ -178,78 +174,54 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
   });
 });
 
-// -------------------------------------------------
-// Hidden text show and hide on windowresize
-// -------------------------------------------------
-const stashText = document.querySelector('.stash-text');
-const stashTextBtn = document.querySelector('.stash-text-btn');
-const lessStashTextBtn = document.querySelector('.stash-text-btn-less');
-const readMoreTxt = document.querySelector('.js-read-more-txt');
-const readMoreTxtBtn = document.querySelector('.js-btn-read-more-open');
-const lessRreadMoreTxtBtn = document.querySelector('.js-btn-read-more-close');
-
-const toggleHiddenText = () => {
-  stashText.classList.toggle('invisible');
-  stashTextBtn.classList.toggle('invisible');
-  lessStashTextBtn.classList.toggle('invisible');
-};
-const toggleProgramText = () => {
-  readMoreTxt.classList.toggle('invisible');
-  readMoreTxtBtn.classList.toggle('invisible');
-  lessRreadMoreTxtBtn.classList.toggle('invisible');
-};
-readMoreTxtBtn.addEventListener('click', toggleProgramText);
-stashTextBtn.addEventListener('click', toggleHiddenText);
-lessRreadMoreTxtBtn.addEventListener('click', toggleProgramText);
-lessStashTextBtn.addEventListener('click', toggleHiddenText);
-
-if (document.documentElement.clientWidth >= 1280) {
-  if (stashText.classList.contains('invisible')) {
-    stashText.classList.toggle('invisible');
-  }
-  if (readMoreTxt.classList.contains('invisible')) {
-    readMoreTxt.classList.toggle('invisible');
-  }
+// Hidden text show
+function showHiddenText() {
+  let hiddenTextList = document.querySelectorAll('.js-hidden-text');
+  hiddenTextList.forEach(item => {
+    const hiddenTextparagraph = item.querySelector('.js-hidden-text-paragraph');
+    const hiddenTextButton = item.querySelector('.js-hidden-text-button');
+    if (hiddenTextparagraph.classList.contains('invisible')) {
+      hiddenTextparagraph.classList.remove('invisible');
+    }
+    if (!hiddenTextButton.classList.contains('invisible')) {
+      hiddenTextButton.classList.add('invisible');
+    }
+  });
 }
-window.addEventListener('resize', function () {
-  if (document.documentElement.clientWidth >= 1280) {
-    if (stashText.classList.contains('invisible')) {
-      stashText.classList.toggle('invisible');
+// Hidden text hide
+function hideHiddenText() {
+  let hiddenTextList = document.querySelectorAll('.js-hidden-text');
+  hiddenTextList.forEach(item => {
+    const hiddenTextparagraph = item.querySelector('.js-hidden-text-paragraph');
+    const hiddenTextButton = item.querySelector('.js-hidden-text-button');
+    if (!hiddenTextparagraph.classList.contains('invisible')) {
+      hiddenTextparagraph.classList.add('invisible');
     }
-    if (!stashTextBtn.classList.contains('invisible')) {
-      stashTextBtn.classList.toggle('invisible');
+    if (hiddenTextButton.classList.contains('invisible')) {
+      hiddenTextButton.classList.remove('invisible');
     }
-    if (!lessStashTextBtn.classList.contains('invisible')) {
-      lessStashTextBtn.classList.toggle('invisible');
-    }
-
-    if (readMoreTxt.classList.contains('invisible')) {
-      readMoreTxt.classList.toggle('invisible');
-    }
-    if (!readMoreTxtBtn.classList.contains('invisible')) {
-      readMoreTxtBtn.classList.toggle('invisible');
-    }
-    if (!lessRreadMoreTxtBtn.classList.contains('invisible')) {
-      lessRreadMoreTxtBtn.classList.toggle('invisible');
-    }
-  }
-  if (document.documentElement.clientWidth < 1280) {
-    if (!stashText.classList.contains('invisible')) {
-      stashText.classList.add('invisible');
-      stashTextBtn.classList.remove('invisible');
-      lessStashTextBtn.classList.add('invisible');
-    }
-    if (!readMoreTxt.classList.contains('invisible')) {
-      readMoreTxt.classList.add('invisible');
-      readMoreTxtBtn.classList.remove('invisible');
-      lessRreadMoreTxtBtn.classList.add('invisible');
-    }
-  }
-});
-
-// -------------------------------------------------
-// Reviews slider
-// -------------------------------------------------
+    hiddenTextButton.innerText = 'Read more';
+  });
+}
+// Show and hide hidden text on button Read more or Less press
+function buttonHiddentTextAction() {
+  let hiddenTextList = document.querySelectorAll('.js-hidden-text');
+  hiddenTextList.forEach(item => {
+    const button = item.querySelector('.js-hidden-text-button');
+    button.addEventListener('click', function (item) {
+      const hiddenTextparagraph = item.currentTarget.parentNode.querySelector(
+        '.js-hidden-text-paragraph'
+      );
+      hiddenTextparagraph.classList.toggle('invisible');
+      if (hiddenTextparagraph.classList.contains('invisible')) {
+        button.innerText = 'Read more';
+      } else {
+        button.innerText = 'Less';
+      }
+    });
+  });
+}
+// Slick slider initialization
 $(document).ready(function () {
   $('.reviews-slide').slick({
     arrows: true,
@@ -290,78 +262,73 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 });
 
 // Animation
-const speakersTitle = document.querySelector('.speakers-title');
-const speakerFirst = document.querySelector('.speaker-first');
-const speakerSecond = document.querySelector('.speaker-second');
-const speakerThird = document.querySelector('.speaker-third');
-const speakerFourth = document.querySelector('.speaker-fourth');
-const scrollToSpeakers = speakersTitle.offsetTop;
-
-const programTitle = document.querySelector('.program-title');
-const programFirst = document.querySelector('.program-first');
-const programSecond = document.querySelector('.program-second');
-const programThird = document.querySelector('.program-third');
-const programFourth = document.querySelector('.program-fourth');
-const scrollTopPrograms = programTitle.offsetTop;
-const viewPortHeight = window.screen.height;
-let isSpeakersShown = false;
-let isProgramShown = false;
-window.addEventListener('scroll', function () {
-  if (!isSpeakersShown) {
-    if (window.pageYOffset > scrollToSpeakers - viewPortHeight + 300) {
-      speakerFirst.className =
-        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-2s';
-      speakerSecond.className =
-        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-3s';
-      speakerThird.className =
-        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-4s';
-      speakerFourth.className =
-        'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-5s';
-      speakersTitle.className =
-        'speakers-title section__title speakers__title animate__animated animate__fadeInUp animate__slower animate__delay-1s';
-      isSpeakersShown = true;
+function animation() {
+  const viewPortHeight = window.screen.height;
+  let isSpeakersShown = false;
+  let isProgramShown = false;
+  window.addEventListener('scroll', function () {
+    if (!isSpeakersShown) {
+      const speakersTitle = document.querySelector('.speakers-title');
+      const scrollToSpeakers = speakersTitle.offsetTop;
+      const speakerFirst = document.querySelector('.speaker-first');
+      const speakerSecond = document.querySelector('.speaker-second');
+      const speakerThird = document.querySelector('.speaker-third');
+      const speakerFourth = document.querySelector('.speaker-fourth');
+      if (window.pageYOffset > scrollToSpeakers - viewPortHeight + 300) {
+        speakerFirst.className =
+          'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-2s';
+        speakerSecond.className =
+          'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-3s';
+        speakerThird.className =
+          'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-4s';
+        speakerFourth.className =
+          'speaker-first speakers__item animate__animated animate__fadeIn animate__slower animate__delay-5s';
+        speakersTitle.className =
+          'speakers-title section__title speakers__title animate__animated animate__fadeInUp animate__slower animate__delay-1s';
+        isSpeakersShown = true;
+      }
     }
-  }
 
-  if (!isProgramShown) {
-    if (window.pageYOffset > scrollTopPrograms - viewPortHeight) {
-      programFirst.className =
-        'program__thumb program__thumb-top animate__animated animate__bounceIn animate__delay-1s';
-      programSecond.className =
-        'program__thumb program__thumb-bottom animate__animated animate__bounceIn animate__delay-3s';
-      programThird.className =
-        'program__thumb program__thumb-top animate__animated animate__bounceIn animate__delay-2s';
-      programFourth.className =
-        'program-fourth transparent program__thumb program__thumb-bottom animate__animated animate__bounceIn animate__delay-4s';
-      programTitle.className =
-        'program-title program__title animate__animated animate__bounceIn animate__delay-1s';
-      isProgramShown = true;
+    if (!isProgramShown) {
+      const programTitle = document.querySelector('.program-title');
+      const scrollTopPrograms = programTitle.offsetTop;
+      const programFirst = document.querySelector('.program-first');
+      const programSecond = document.querySelector('.program-second');
+      const programThird = document.querySelector('.program-third');
+      const programFourth = document.querySelector('.program-fourth');
+      if (window.pageYOffset > scrollTopPrograms - viewPortHeight) {
+        programFirst.className =
+          'program__thumb program__thumb-top animate__animated animate__bounceIn animate__delay-1s';
+        programSecond.className =
+          'program__thumb program__thumb-bottom animate__animated animate__bounceIn animate__delay-3s';
+        programThird.className =
+          'program__thumb program__thumb-top animate__animated animate__bounceIn animate__delay-2s';
+        programFourth.className =
+          'program-fourth transparent program__thumb program__thumb-bottom animate__animated animate__bounceIn animate__delay-4s';
+        programTitle.className =
+          'program-title program__title animate__animated animate__bounceIn animate__delay-1s';
+        isProgramShown = true;
+      }
     }
-  }
-});
+  });
+}
+//Up button
+function upButton() {
+  const upButton = document.querySelector('.up-button');
+  window.onscroll = function () {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      upButton.classList.add('up-button--visible');
+    } else {
+      upButton.classList.remove('up-button--visible');
+    }
+  };
+}
 
-// const logoHover = siteLogo => {
-//   console.log('hover');
-//   siteLogo.href = './images/icons.svg#icon-logo-hover';
-// };
-// const logo = siteLogo => {
-//   console.log('out-hover');
-
-//   siteLogo.href = './images/icons.svg#icon-logo';
-// };
-
-// var logos = document.getElementsByClassName('logo');
-// for (var i = 0, len = logos.length; i < len; i++) {
-//   console.log('for');
-
-//   logos[i].addEventListener('mouseover', logoHover(logos[i]));
-//   logos[i].addEventListener('mouseout', logo(logos[i]));
-// }
-const upButton = document.querySelector('.up-button');
-window.onscroll = function () {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-    upButton.classList.add('up-button--visible');
-  } else {
-    upButton.classList.remove('up-button--visible');
-  }
-};
+animation();
+mobileMenu();
+upButton();
+buttonHiddentTextAction();
+reCreateBackground();
+circlePaint();
+parallaxBackground();
+checkChangeRange();
