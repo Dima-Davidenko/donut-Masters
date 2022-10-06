@@ -1,12 +1,23 @@
 // -------------------------------------------------
 // Make background circles
 // -------------------------------------------------
+function reCreateBackground() {
+  const bodyHeight = document.body.offsetHeight;
+  const canvasContainer = document.querySelector('.js-canvas-container');
+  let backgroundCanvas = document.querySelector('.background');
+  if (backgroundCanvas) {
+    canvasContainer.removeChild(backgroundCanvas);
+  }
+  backgroundCanvas = document.createElement('div');
+  canvasContainer.append(backgroundCanvas);
+  backgroundCanvas.className = 'background';
+  backgroundCanvas.style.height = bodyHeight + 'px';
+}
+
 function circlePaint() {
   const backgroundCanvas = document.querySelector('.background');
   const bodyHeight = document.body.offsetHeight;
   const bodyWidth = document.body.offsetWidth;
-  const canvasHeight = bodyHeight;
-  backgroundCanvas.style.height = canvasHeight + 'px';
 
   for (let i = 0; i <= bodyHeight - 100; i += 40 + Math.round(Math.random() * 200)) {
     // Create new div
@@ -28,76 +39,101 @@ function circlePaint() {
       circleDiv.style.width = radius + 'px';
       // console.log(circleDiv.style.width);
     } else {
-      // Еслине помещаемся - обрезаем ширину круга
+      // Если не помещаемся - обрезаем ширину круга
       circleDiv.style.width = radius + diffWidth + 'px';
     }
   }
 
   // Create donut paralax bg
-  const bg1Div = document.createElement('div');
-
+}
+function parallaxBackground() {
+  const bodyHeight = document.body.offsetHeight;
+  const backgroundCanvas = document.querySelector('.background');
   const bgDivHeight = Math.round(bodyHeight / 3);
-  backgroundCanvas.append(bg1Div);
-  bg1Div.className = 'donat-bg-1';
-  bg1Div.style.height = bgDivHeight + 'px';
-
-  const bg2Div = document.createElement('div');
-  backgroundCanvas.append(bg2Div);
-  bg2Div.className = 'donat-bg-2';
-  bg2Div.style.height = bgDivHeight + 'px';
-
-  const bg3Div = document.createElement('div');
-  backgroundCanvas.append(bg3Div);
-  bg3Div.className = 'donat-bg-3';
-  bg3Div.style.height = bgDivHeight + 'px';
-
   const viewPortHeight = window.innerHeight;
 
-  const bg1YPosition = window.pageYOffset + viewPortHeight / 2 - 180 + 5;
-  const bg2YPosition = 0 - bgDivHeight + window.pageYOffset + viewPortHeight / 2 - 180;
-  const bg3YPosition = 0 - 2 * bgDivHeight + window.pageYOffset + viewPortHeight / 2 - 180;
-
-  bg1Div.style.cssText =
-    'height: ' + bgDivHeight + 'px; background-position: 50% ' + bg1YPosition + 'px;';
-
-  bg2Div.style.cssText =
-    'height: ' + bgDivHeight + 'px; background-position: 50% ' + bg2YPosition + 'px;';
-
-  bg3Div.style.cssText =
-    'height: ' + (bgDivHeight + 1000) + 'px; background-position: 50% ' + bg3YPosition + 'px;';
+  let bgDivs = [];
+  let bgDivsPostion = [];
+  for (let i = 0; i <= 2; i += 1) {
+    bgDivs[i] = document.createElement('div');
+    backgroundCanvas.append(bgDivs[i]);
+    bgDivs[i].className = 'donat-bg-' + (i + 1);
+    bgDivs[i].style.height = bgDivHeight + 'px';
+    bgDivsPostion[i] = 0 - bgDivHeight * i + window.pageYOffset + viewPortHeight / 2 - 180;
+    bgDivs[i].style.cssText =
+      'height: ' + bgDivHeight + 'px; background-position: 50% ' + bgDivsPostion[i] + 'px;';
+  }
 
   window.addEventListener('scroll', function () {
     const viewPortHeight = window.innerHeight;
 
-    const bg1YPosition = window.pageYOffset + viewPortHeight / 2 - 180 + 5;
-    const bg2YPosition = 0 - bgDivHeight + window.pageYOffset + viewPortHeight / 2 - 180;
-    const bg3YPosition = 0 - 2 * bgDivHeight + window.pageYOffset + viewPortHeight / 2 - 180;
+    for (let i = 0; i <= 2; i += 1) {
+      bgDivsPostion[i] = 0 - bgDivHeight * i + window.pageYOffset + viewPortHeight / 2 - 180;
+    }
 
-    // if (window.pageYOffset < bgDivHeight) {
-    console.log(Math.round(window.pageYOffset));
-
-    bg1Div.style.cssText =
-      'height: ' + bgDivHeight + 'px; background-position: 50% ' + bg1YPosition + 'px;';
-    // }
-    // if (window.pageYOffset > bgDivHeight * 2 - viewPortHeight * 2 - 255) {
-    bg2Div.style.cssText =
-      'height: ' + bgDivHeight + 'px; background-position: 50% ' + bg2YPosition + 'px;';
-    // }
-    // if (window.pageYOffset > bgDivHeight * 3 - viewPortHeight * 2 - 255) {
-    // console.log(window.pageYOffset);
-    // console.log(bgDivHeight * 2 - viewPortHeight - 200);
-
-    bg3Div.style.cssText =
-      'height: ' + (bgDivHeight + 1000) + 'px; background-position: 50% ' + bg3YPosition + 'px;';
-    // }
-
-    // console.log(window.pageYOffset);
-    // console.log(bodyHeight / 3);
-
-    // console.log(bgDivHeight * 2);
+    if (window.pageYOffset < bgDivHeight - 300) {
+      bgDivs[0].style.cssText =
+        'height: ' + bgDivHeight + 'px; background-position: 50% ' + bgDivsPostion[0] + 'px;';
+    }
+    if (
+      window.pageYOffset > bgDivHeight - viewPortHeight / 2 - 300 &&
+      window.pageYOffset < 2 * bgDivHeight - 200
+    ) {
+      bgDivs[1].style.cssText =
+        'height: ' + bgDivHeight + 'px; background-position: 50% ' + bgDivsPostion[1] + 'px;';
+    }
+    if (
+      window.pageYOffset > 2 * bgDivHeight - viewPortHeight / 2 - 300 &&
+      window.pageYOffset < 3 * bgDivHeight - 300
+    ) {
+      bgDivs[2].style.cssText =
+        'height: ' +
+        (bgDivHeight + 1000) +
+        'px; background-position: 50% ' +
+        bgDivsPostion[2] +
+        'px;';
+    }
   });
 }
+
+function checkChangeRange() {
+  const bodyWidth = document.body.offsetWidth;
+  let oldRange = 0;
+  if (bodyWidth >= 1280) {
+    oldRange = 3;
+  } else if (bodyWidth < 1280 && bodyWidth >= 768) {
+    oldRange = 2;
+  } else {
+    oldRange = 1;
+  }
+  console.log(oldRange);
+
+  let newRange = oldRange;
+  window.addEventListener('resize', function () {
+    const bodyWidth = document.body.offsetWidth;
+    let oldRange = 0;
+    if (bodyWidth >= 1280) {
+      oldRange = 3;
+    } else if (bodyWidth < 1280 && bodyWidth >= 768) {
+      oldRange = 2;
+    } else {
+      oldRange = 1;
+    }
+    if (newRange !== oldRange) {
+      // Set timeouts to get proper bodyHeight (give time to render the page)
+      this.setTimeout(reCreateBackground, 500);
+      this.setTimeout(circlePaint, 510);
+      this.setTimeout(parallaxBackground, 520);
+      newRange = oldRange;
+      console.log('rePaint');
+      console.log(newRange);
+    }
+  });
+}
+reCreateBackground();
 circlePaint();
+parallaxBackground();
+checkChangeRange();
 
 // -------------------------------------------------
 // Mobile menu open, close
